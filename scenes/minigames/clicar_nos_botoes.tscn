@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dw470vfwmt4tj"]
+
+[ext_resource type="Script" uid="uid://dasts784nhmha" path="res://scenes/minigames/clicar_nos_botoes.gd" id="1_1g85f"]
+[ext_resource type="PackedScene" uid="uid://bbp67r78ox6hu" path="res://scenes/minigames/button.tscn" id="2_rjvyb"]
+
+[node name="ClicarNosBotoes" type="Control" unique_id=921422289]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1g85f")
+buraco_scene = ExtResource("2_rjvyb")
+quantidade = 20
+
+[node name="PlayArea" type="Control" parent="." unique_id=1469251865]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 72.0
+offset_top = -251.0
+offset_right = -80.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1061326077]
+wait_time = 10.0
+autostart = true

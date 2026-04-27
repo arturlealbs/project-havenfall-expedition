@@ -8,38 +8,10 @@
 [node name="Game" type="Node" unique_id=1626338255]
 script = ExtResource("1_1il7v")
 
-[node name="Player3DTemplate" parent="." unique_id=1404282923 node_paths=PackedStringArray("o2_Bar", "H2o_Bar") instance=ExtResource("1_w0p8v")]
+[node name="Player3DTemplate" parent="." unique_id=1404282923 instance=ExtResource("1_w0p8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43638, 0, -7.8513)
-decay_O2 = 0.57
-o2_Bar = NodePath("../Control/BarraO2")
-decay_H2o = 0.57
-H2o_Bar = NodePath("../Control/BarraH2o")
-wall_slide_gravity = -15.0
-wall_offset = 0.0
-tilt_lower_limit = -0.5
 
 [node name="FlagReachedScreen" parent="." unique_id=735488172 instance=ExtResource("19_cpgj4")]
 
 [node name="Level" parent="." unique_id=823547301 instance=ExtResource("7_2frud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 31.4)
-
-[node name="Control" type="Control" parent="." unique_id=694541121]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="BarraO2" type="ProgressBar" parent="Control" unique_id=1372780438]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 310.0
-offset_bottom = 50.000008
-value = 93.3
-
-[node name="BarraH2o" type="ProgressBar" parent="Control" unique_id=58012323]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 63.0
-offset_right = 310.0
-offset_bottom = 103.0

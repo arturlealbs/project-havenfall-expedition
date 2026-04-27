@@ -1,0 +1,25 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dg4ekyksi35a8"]
+
+[ext_resource type="Texture2D" uid="uid://bjirwbavti2ra" path="res://entities/player/model/model/variations/diffuse.png" id="1_vrimj"]
+[ext_resource type="Texture2D" uid="uid://dbg3uqtvqxigv" path="res://entities/player/model/model/sophia_roughness.png" id="2_db2ol"]
+[ext_resource type="Texture2D" uid="uid://cwigagtvyuko0" path="res://entities/player/model/model/sophia_normal.png" id="3_eytea"]
+[ext_resource type="Texture2D" uid="uid://dxqmgxq6o21yr" path="res://entities/player/model/model/SSS.png" id="4_8frod"]
+
+[resource]
+resource_name = "sophia_material"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_vrimj")
+metallic_texture = ExtResource("2_db2ol")
+metallic_texture_channel = 2
+roughness = 0.8
+roughness_texture = ExtResource("2_db2ol")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_eytea")
+rim_enabled = true
+rim = 0.5
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.25
+subsurf_scatter_skin_mode = true
+subsurf_scatter_texture = ExtResource("4_8frod")

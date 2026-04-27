@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://xr1l2ocrxvh1"]
+
+[ext_resource type="Script" uid="uid://i6cofusi31rj" path="res://scenes/minigames/button.gd" id="1_i2e8a"]
+[ext_resource type="Script" uid="uid://dyuh5bcygg0vg" path="res://scenes/minigames/clicar_na_ordem.gd" id="1_ksagx"]
+
+[node name="ClicarNaOrdem" type="Control" unique_id=69916150]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ksagx")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1377912997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 73.0
+offset_top = 107.0
+offset_right = -92.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=147184108]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "1"
+script = ExtResource("1_i2e8a")
+id = 1
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=1744397910]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "2
+"
+script = ExtResource("1_i2e8a")
+id = 2
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=272605528]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "3
+"
+script = ExtResource("1_i2e8a")
+id = 3
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1861187210]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "4
+"
+script = ExtResource("1_i2e8a")
+id = 4
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=859208095]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "5"
+script = ExtResource("1_i2e8a")
+id = 5
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=836074372]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+script = ExtResource("1_i2e8a")
+id = 6
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=1024628527]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "1"
+script = ExtResource("1_i2e8a")
+id = 7
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=1972112272]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 120
+text = "1"
+script = ExtResource("1_i2e8a")
+id = 8

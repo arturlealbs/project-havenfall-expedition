@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bbp67r78ox6hu"]
+
+[ext_resource type="Script" uid="uid://cjngj84d5qqnu" path="res://scenes/minigames/buraco.gd" id="1_mi6dp"]
+
+[node name="Button" type="Button" unique_id=1882518650]
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_mi6dp")

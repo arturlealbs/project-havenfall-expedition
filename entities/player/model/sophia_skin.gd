@@ -3,8 +3,10 @@ class_name SophiaSkin extends Node3D
 @onready var animation_tree = %AnimationTree
 @onready var state_machine : AnimationNodeStateMachinePlayback = animation_tree.get("parameters/StateMachine/playback")
 @onready var move_tilt_path : String = "parameters/StateMachine/Move/tilt/add_amount"
+@onready var move_speed_path : String = "parameters/StateMachine/Move/speed/blend_amount"
 
 var run_tilt = 0.0 : set = _set_run_tilt
+var run_speed = 0.0 : set = _set_run_speed
 
 @export var blink = true : set = set_blink
 @onready var blink_timer = %BlinkTimer
@@ -34,6 +36,9 @@ func set_blink(state : bool):
 func _set_run_tilt(value : float):
 	run_tilt = clamp(value, -1.0, 1.0)
 	animation_tree.set(move_tilt_path, run_tilt)
+
+func _set_run_speed(value: float):
+	animation_tree.set(move_speed_path, value)
 
 func idle():
 	state_machine.travel("Idle")
