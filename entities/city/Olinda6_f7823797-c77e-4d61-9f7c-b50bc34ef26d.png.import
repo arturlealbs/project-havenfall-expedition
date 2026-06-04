@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cncgi1yrcs1ph"
+path.s3tc="res://.godot/imported/Olinda6_f7823797-c77e-4d61-9f7c-b50bc34ef26d.png-fa320f9455fa0d58d2e3cc65384a58bc.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3322403cc5912c3c8abf9f1948896052"
+}
+
+[deps]
+
+source_file="res://entities/city/Olinda6_f7823797-c77e-4d61-9f7c-b50bc34ef26d.png"
+dest_files=["res://.godot/imported/Olinda6_f7823797-c77e-4d61-9f7c-b50bc34ef26d.png-fa320f9455fa0d58d2e3cc65384a58bc.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

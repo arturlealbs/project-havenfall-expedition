@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cqbnxk3vdybp8"]
+[gd_scene format=3 uid="uid://c5s338vhkwlbd"]
 
 [ext_resource type="Script" uid="uid://b1p1lnectvs25" path="res://scenes/test_level/game.gd" id="1_1il7v"]
 [ext_resource type="PackedScene" uid="uid://bofx5wyp8403k" path="res://entities/player/player_3d_template.tscn" id="1_w0p8v"]
@@ -10,8 +10,11 @@ script = ExtResource("1_1il7v")
 
 [node name="Player3DTemplate" parent="." unique_id=1404282923 instance=ExtResource("1_w0p8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43638, 0, -7.8513)
+wall_slide_gravity = -15.0
+wall_offset = 0.0
+tilt_lower_limit = -0.5
 
 [node name="FlagReachedScreen" parent="." unique_id=735488172 instance=ExtResource("19_cpgj4")]
 
 [node name="Level" parent="." unique_id=823547301 instance=ExtResource("7_2frud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 31.4)
+transform = Transform3D(0.8707937, 0, 0.49164864, 0, 1, 0, -0.49164864, 0, 0.8707937, 179.8309, -0.5206833, -26.609034)
