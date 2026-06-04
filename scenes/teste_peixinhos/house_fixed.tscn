@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bypej04h3mtk0"]
+
+[ext_resource type="PackedScene" uid="uid://cbk27mib3p2a4" path="res://scenes/teste_peixinhos/Untitledxfixed.glb" id="1_i3op0"]
+
+[node name="Untitledxfixed" unique_id=467789966 instance=ExtResource("1_i3op0")]
+
+[node name="Cube" parent="." index="0" unique_id=729968384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.5573125, 0, 0, 0)
+
+[node name="Plane" parent="." index="1" unique_id=958764442]
+transform = Transform3D(0.349893, 0.021165676, 0, -0.033741847, 0.21948184, 0, 0, 0, 0.2205, -1.1018353, 1.193, 5.53)

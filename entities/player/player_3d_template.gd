@@ -1,5 +1,15 @@
 extends CharacterBody3D
 
+@export_group("HealthStats")
+@export var max_O2 = 100
+@export var decay_O2 = 2.0 
+@export var running_decay_O2 = 2.5
+@export var o2_Bar :ProgressBar
+@export var max_H2o = 100
+@export var decay_H2o = 2.0
+@export var running_decay_H2o = 1.0
+
+@export var H2o_Bar :ProgressBar
 @export_group("Movement")
 ## Character maximum run speed on the ground in meters per second.
 @export var move_speed := 8.0
@@ -31,7 +41,6 @@ var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
 var _last_yaw := 0.0
 var _smoothed_turn := 0.0
-
 ## The last movement or aim direction input by the player. We use this to orient
 ## the character model.
 @onready var _last_input_direction := global_basis.z
@@ -61,7 +70,8 @@ func _ready() -> void:
 		_skin.idle()
 		_ground_dust_particles.emitting = false
 	)
-
+	current_O2 = max_O2
+	current_H2o = max_H2o
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -87,7 +97,7 @@ func _physics_process(delta: float) -> void:
 	_camera_input_direction = Vector2.ZERO
 	
 	# Calculate movement input and align it to the camera's direction.
-	var raw_input := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down", 0.4)
+	var raw_input := Input.get_vector("move_left", "move_right", "move_up", "move_down", 0.4)
 	# Should be projected onto the ground plane.
 	var forward := _camera.global_basis.z
 	var right := _camera.global_basis.x
@@ -163,3 +173,16 @@ func _physics_process(delta: float) -> void:
 
 	_was_on_floor_last_frame = is_on_floor()
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	current_O2 = current_O2 - decay_O2 * delta
+	o2_Bar.value = current_O2
+	current_H2o = current_H2o - decay_H2o * delta
+	H2o_Bar.value = current_H2o
+	if(current_O2 <= 0 or current_H2o <= 0):
+		global_position = _start_position
+		velocity = Vector3.ZERO
+		_skin.idle()
+		current_O2 = max_O2
+		current_H2o = max_H2o
+		

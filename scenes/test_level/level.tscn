@@ -246,3 +246,15 @@ use_collision = true
 polygon = PackedVector2Array(0, 0, 3, 2, 3, 0)
 depth = 4.0
 material = ExtResource("7_njuj4")
+
+[node name="CasaCorrigida" parent="." unique_id=1325079441 instance=ExtResource("13_wr1rh")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -13.151356, 1.9074364, -27.260866)
+
+[node name="Casadesla" parent="." unique_id=1657356333 instance=ExtResource("14_tui3c")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -21.494907, 1.6072168, -37.214413)
+
+[node name="casa_christian_unificada" parent="." unique_id=68045424 instance=ExtResource("15_p7jm8")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -20.452976, 1.4496695, -47.61498)
+
+[node name="CasaCrhistianEditavel" parent="." unique_id=1678120991 instance=ExtResource("16_4vgpq")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -20.436634, 1.4496676, -43.6482)

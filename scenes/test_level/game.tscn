@@ -8,7 +8,7 @@
 [node name="Game" type="Node" unique_id=1626338255]
 script = ExtResource("1_1il7v")
 
-[node name="Player3DTemplate" parent="." unique_id=1404282923 instance=ExtResource("1_w0p8v")]
+[node name="Player3DTemplate" parent="." unique_id=1404282923 node_paths=PackedStringArray("o2_Bar", "H2o_Bar") instance=ExtResource("1_w0p8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43638, 0, -7.8513)
 wall_slide_gravity = -15.0
 wall_offset = 0.0

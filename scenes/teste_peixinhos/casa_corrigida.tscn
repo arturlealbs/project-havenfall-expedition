@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cfxyi1n1253yv"]
+
+[ext_resource type="PackedScene" uid="uid://bypej04h3mtk0" path="res://scenes/teste_peixinhos/house_fixed.tscn" id="1_2my25"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l4k3u"]
+size = Vector3(2.0293274, 2.0232544, 11.138916)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_33m5k"]
+size = Vector3(2.8374023, 0.10772705, 11.522217)
+
+[node name="CasaCorrigida" type="StaticBody3D" unique_id=1325079441]
+
+[node name="Untitledxfixed" parent="." unique_id=467789966 instance=ExtResource("1_2my25")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=763039949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059661865, -0.0022058487, 0.012151718)
+shape = SubResource("BoxShape3D_l4k3u")
+debug_color = Color(0.964735, 5.7756904e-07, 0.4880547, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=694698609]
+transform = Transform3D(0.9955488, 0.094247326, 0, -0.094247326, 0.9955488, 0, 0, 0, 1, -0.050328672, 1.1371735, 0.014526367)
+shape = SubResource("BoxShape3D_33m5k")
+debug_color = Color(0, 0.6138611, 0.6141411, 0.41960785)
