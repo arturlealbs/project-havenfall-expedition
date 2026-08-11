@@ -1,0 +1,253 @@
+[gd_scene format=3 uid="uid://cumtq1d3dxgn2"]
+
+[ext_resource type="PackedScene" uid="uid://diquntljs3d5x" path="res://scenes/minigames/drenagem/PontoDrenagem.tscn" id="1_g77qv"]
+[ext_resource type="Script" uid="uid://b30cs22cb4mnv" path="res://scenes/minigames/minigame_drenagem.gd" id="1_xx4ua"]
+
+[node name="MinigameDrenagem" type="Control" unique_id=426168809]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xx4ua")
+
+[node name="Background" type="ColorRect" parent="." unique_id=446985445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.07, 0.1, 1)
+
+[node name="ShakeContainer" type="Control" parent="." unique_id=1495914677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Control" parent="ShakeContainer" unique_id=1463631241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -280.0
+offset_right = 500.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BorderGlow" type="ColorRect" parent="ShakeContainer/MainPanel" unique_id=622915072]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15, 0.35, 0.5, 0.5)
+
+[node name="PanelBG" type="ColorRect" parent="ShakeContainer/MainPanel" unique_id=1952729849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09, 0.12, 0.17, 1)
+
+[node name="HeaderPanel" type="ColorRect" parent="ShakeContainer/MainPanel" unique_id=987159673]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.13, 0.17, 0.24, 1)
+
+[node name="TitleLabel" type="Label" parent="ShakeContainer/MainPanel/HeaderPanel" unique_id=1831104335]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "PAINEL DE CONTROL DE DRENAGEM"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="ShakeContainer/MainPanel/HeaderPanel" unique_id=62010995]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 38.0
+offset_bottom = 58.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+theme_override_font_sizes/font_size = 13
+text = "Conecte os terminais hidráulicos aos receptores correspondentes"
+horizontal_alignment = 1
+
+[node name="StatusCounterLabel" type="Label" parent="ShakeContainer/MainPanel/HeaderPanel" unique_id=102655208]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.2, 0.95, 0.4, 1)
+theme_override_font_sizes/font_size = 14
+text = "0 / 3 TUBOS CONECTADOS"
+horizontal_alignment = 1
+
+[node name="LadoEsquerdo" type="VBoxContainer" parent="ShakeContainer/MainPanel" unique_id=1263431942]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -140.0
+offset_right = 140.0
+offset_bottom = 180.0
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="PontoDrenagem" parent="ShakeContainer/MainPanel/LadoEsquerdo" unique_id=357061364 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+
+[node name="PontoDrenagem2" parent="ShakeContainer/MainPanel/LadoEsquerdo" unique_id=2000343585 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+id_tubulacao = 1
+
+[node name="PontoDrenagem3" parent="ShakeContainer/MainPanel/LadoEsquerdo" unique_id=1910909669 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+id_tubulacao = 2
+
+[node name="LadoDireito" type="VBoxContainer" parent="ShakeContainer/MainPanel" unique_id=1679636332]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -140.0
+offset_right = -60.0
+offset_bottom = 180.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="PontoDrenagem" parent="ShakeContainer/MainPanel/LadoDireito" unique_id=119344688 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+id_tubulacao = 1
+eh_origem = false
+
+[node name="PontoDrenagem2" parent="ShakeContainer/MainPanel/LadoDireito" unique_id=1541212150 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+id_tubulacao = 2
+eh_origem = false
+
+[node name="PontoDrenagem3" parent="ShakeContainer/MainPanel/LadoDireito" unique_id=650507013 instance=ExtResource("1_g77qv")]
+layout_mode = 2
+eh_origem = false
+
+[node name="ContainerLinhas" type="Node2D" parent="ShakeContainer/MainPanel" unique_id=1301038571]
+
+[node name="ContainerParticulas" type="Node2D" parent="ShakeContainer/MainPanel" unique_id=827073876]
+
+[node name="VitoriaOverlay" type="Control" parent="." unique_id=353445474]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Darken" type="ColorRect" parent="VitoriaOverlay" unique_id=1564284074]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="VictoryCard" type="ColorRect" parent="VitoriaOverlay" unique_id=194428475]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -130.0
+offset_right = 220.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.16, 0.22, 1)
+
+[node name="Border" type="ColorRect" parent="VitoriaOverlay/VictoryCard" unique_id=1533672343]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2, 0.8, 0.4, 0.6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VitoriaOverlay/VictoryCard" unique_id=525939642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="VitoriaOverlay/VictoryCard/VBoxContainer" unique_id=1777756518]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "DRENAGEM RESTAURADA!"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="VitoriaOverlay/VictoryCard/VBoxContainer" unique_id=747723317]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Todos os circuitos hidráulicos operam normalmente."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BtnReiniciar" type="Button" parent="VitoriaOverlay/VictoryCard/VBoxContainer" unique_id=1427514735]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "REINICIAR MINIGAME"
