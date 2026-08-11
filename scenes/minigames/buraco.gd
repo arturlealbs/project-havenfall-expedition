@@ -9,3 +9,9 @@ func _ready():
 func _ao_ser_clicado():
 	buraco_tapado.emit()
 	queue_free() # Remove o nó da árvore de forma segura no próximo frame
+
+func definir_textura(textura: Texture2D):
+	if textura != null:
+		icon = textura
+		flat = true
+		expand_icon = true

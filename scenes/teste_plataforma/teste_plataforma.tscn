@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b356gvlr0vc1b"]
+
+[ext_resource type="PackedScene" uid="uid://cnedxfn2pxh2t" path="res://scenes/test_level/level.tscn" id="1_q66ps"]
+[ext_resource type="PackedScene" uid="uid://bofx5wyp8403k" path="res://entities/player/player_3d_template.tscn" id="2_8q5hu"]
+[ext_resource type="Script" uid="uid://dpbx7pbos6jpg" path="res://scenes/teste_plataforma/teste_plataforma.gd" id="2_ic46k"]
+[ext_resource type="Texture2D" uid="uid://dktrsl2tqq1jr" path="res://assets/Ajuste de deslocamento HSL.png" id="3_8q5hu"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ic46k"]
+panorama = ExtResource("3_8q5hu")
+energy_multiplier = 0.7
+
+[sub_resource type="Sky" id="Sky_0h0bb"]
+sky_material = SubResource("PanoramaSkyMaterial_ic46k")
+
+[sub_resource type="Environment" id="Environment_xsh4p"]
+background_mode = 2
+sky = SubResource("Sky_0h0bb")
+ambient_light_source = 3
+ambient_light_color = Color(0.74902, 0.742654, 0.615273, 1)
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 2
+tonemap_exposure = 1.05
+tonemap_white = 0.95
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_intensity = 1.4
+glow_intensity = 4.98
+glow_strength = 0.26
+glow_bloom = 0.08
+glow_blend_mode = 0
+glow_hdr_threshold = 0.26
+glow_hdr_scale = 0.0
+glow_hdr_luminance_cap = 18.75
+glow_map_strength = 1.0
+fog_light_color = Color(0.843137, 0.737255, 0.329412, 1)
+fog_density = 0.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.0
+fog_height_density = 0.1
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
+volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
+
+[node name="TestePlataforma" type="Node3D" unique_id=23301481]
+
+[node name="Level" parent="." unique_id=62490946 instance=ExtResource("1_q66ps")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level" unique_id=1131645289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2243652, 2.0758317, 2.3639665)
+use_collision = true
+size = Vector3(2.7700195, 4.105896, 2.5307617)
+script = ExtResource("2_ic46k")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level" unique_id=1104424522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4955297, 1.6618912, 1.6707659)
+use_collision = true
+size = Vector3(2.7700195, 0.2579193, 1.4353027)
+script = ExtResource("2_ic46k")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Level" unique_id=429571061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2800186, 3.2210777, 1.6707659)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/AnimatableBody3D" unique_id=289405112]
+size = Vector3(2.7700195, 0.2579193, 1.4353027)
+
+[node name="Player3DTemplate" parent="." unique_id=1377409483 instance=ExtResource("2_8q5hu")]
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=232463062]
+environment = SubResource("Environment_xsh4p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1654017452]
+transform = Transform3D(-0.327016, 0.941731, -0.0787648, 0.688764, 0.294578, 0.662441, 0.647044, 0.162378, -0.744962, -47.2295, 26.8832, -28.0205)
+light_energy = 0.25
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
