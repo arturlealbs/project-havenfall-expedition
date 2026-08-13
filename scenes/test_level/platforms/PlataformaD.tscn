@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dqrk50op1ivdd"]
+
+[ext_resource type="Script" uid="uid://c7k8qjcws06xa" path="res://scenes/test_level/platforms/platform_spinning_obstacle.gd" id="1_spinscript"]
+[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://scenes/test_level/checkboard.png" id="2_checktex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.25, 0.45, 0.85, 1)
+albedo_texture = ExtResource("2_checktex")
+roughness = 0.85
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 10.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_armH"]
+size = Vector3(8.5, 0.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_armV"]
+size = Vector3(1, 0.5, 8.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obstacle"]
+albedo_color = Color(0.85, 0.15, 0.15, 1)
+roughness = 0.5
+
+[node name="PlataformaD" type="Node3D" unique_id=700961054]
+
+[node name="Piso" type="CSGBox3D" parent="." unique_id=1043969387]
+material_override = SubResource("StandardMaterial3D_floor")
+use_collision = true
+size = Vector3(9, 1, 28)
+
+[node name="ObstaculoA" type="AnimatableBody3D" parent="." unique_id=923681544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -8)
+script = ExtResource("1_spinscript")
+rotation_speed = 80.0
+bob_height = 0.6
+bob_speed = 1.0
+
+[node name="CollisionH_A" type="CollisionShape3D" parent="ObstaculoA" unique_id=1661488165]
+shape = SubResource("BoxShape3D_armH")
+
+[node name="CollisionV_A" type="CollisionShape3D" parent="ObstaculoA" unique_id=12518453]
+shape = SubResource("BoxShape3D_armV")
+
+[node name="BracoH" type="CSGBox3D" parent="ObstaculoA" unique_id=1347381872]
+material_override = SubResource("StandardMaterial3D_obstacle")
+size = Vector3(8.5, 0.5, 1)
+
+[node name="BracoV" type="CSGBox3D" parent="ObstaculoA" unique_id=1095811226]
+material_override = SubResource("StandardMaterial3D_obstacle")
+size = Vector3(1, 0.5, 8.5)
+
+[node name="ObstaculoB" type="AnimatableBody3D" parent="." unique_id=2086495850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 8)
+script = ExtResource("1_spinscript")
+rotation_speed = -55.0
+bob_height = 0.8
+bob_speed = 0.8
+
+[node name="CollisionH_B" type="CollisionShape3D" parent="ObstaculoB" unique_id=796574518]
+shape = SubResource("BoxShape3D_armH")
+
+[node name="CollisionV_B" type="CollisionShape3D" parent="ObstaculoB" unique_id=1023031993]
+shape = SubResource("BoxShape3D_armV")
+
+[node name="BracoH" type="CSGBox3D" parent="ObstaculoB" unique_id=1034742423]
+material_override = SubResource("StandardMaterial3D_obstacle")
+size = Vector3(8.5, 0.5, 1)
+
+[node name="BracoV" type="CSGBox3D" parent="ObstaculoB" unique_id=1492397646]
+material_override = SubResource("StandardMaterial3D_obstacle")
+size = Vector3(1, 0.5, 8.5)
