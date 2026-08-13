@@ -30,6 +30,7 @@ script = ExtResource("1_1g85f")
 buraco_scene = ExtResource("2_rjvyb")
 imagens_fundo = Array[Texture2D]([ExtResource("3_ojtk4"), ExtResource("4_d277r"), ExtResource("5_72d0l"), ExtResource("6_poo6h"), ExtResource("7_jc73u")])
 imagens_buraco = Array[Texture2D]([ExtResource("8_6axer"), ExtResource("9_pumok"), ExtResource("10_wclsp"), ExtResource("11_7eyvl"), ExtResource("12_4ajtg"), ExtResource("13_xtj22"), ExtResource("14_ldmiu"), ExtResource("15_mlx6y"), ExtResource("16_eo3w1"), ExtResource("17_0l672"), ExtResource("18_v8rnv")])
+tamanho_base_buraco = Vector2(120, 120)
 quantidade = 20
 
 [node name="Background" type="TextureRect" parent="." unique_id=2062933197]
@@ -39,9 +40,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 expand_mode = 1
 stretch_mode = 6
-mouse_filter = 2
 
 [node name="PlayArea" type="Control" parent="." unique_id=1469251865]
 layout_mode = 1
