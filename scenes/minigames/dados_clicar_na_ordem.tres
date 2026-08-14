@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_46r7p")
 nome = "Siga o Passo a Passo"
+descricao = "Execute as tarefas na ordem correta clicando com o mouse na imagem que representa o próximo passo. Se estiver na dúvida, pode checar as instruções no botão de ajuda (?) no canto da tela."
 simbolo_3d = ExtResource("2_bklap")
 imagem_menu = ExtResource("1_gi7mt")
 minigame_scene = ExtResource("2_4k5jr")

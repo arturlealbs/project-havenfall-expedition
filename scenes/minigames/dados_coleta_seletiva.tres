@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_b7gvq")
 nome = "Coleta Seletiva"
+descricao = "Arraste os lixos para a lixeira correta. Se estiver na dúvida, pode checar a cor de cada tipo de lixeira no botão de ajuda (?) no canto da tela."
 simbolo_3d = ExtResource("4_yg2j7")
 imagem_menu = ExtResource("1_asogo")
 minigame_scene = ExtResource("2_stdwm")

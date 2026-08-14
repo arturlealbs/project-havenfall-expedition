@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_spoh4")
 nome = "Tape os Buracos"
+descricao = "Usando o botão esquerdo do mouse, clique nos buracos para tapá-los."
 simbolo_3d = ExtResource("3_fr6n4")
 imagem_menu = ExtResource("1_fr6n4")
 minigame_scene = ExtResource("1_c7n7n")
