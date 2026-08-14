@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dnn5w7tgo532w"]
+
+[ext_resource type="PackedScene" uid="uid://66kjelr6ky7q" path="res://addons/BinbunVFX/loot_effects/effects/floating/loot_vfx_legendary.tscn" id="1_m2p6k"]
+[ext_resource type="Script" uid="uid://di8kfo4gbhown" path="res://scenes/minigame_orb.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bck4a737bcf1f" path="res://assets/ui/03b90549-5fd5-4df3-9d58-f09b18abef34.png" id="2_rhh0u"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_orb"]
+radius = 3.0
+
+[node name="MinigameOrb" type="Node3D" unique_id=1090280066]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("1_script")
+
+[node name="LootVFX_Legendary" parent="." unique_id=603875447 instance=ExtResource("1_m2p6k")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=209388068]
+pixel_size = 0.0004
+billboard = 2
+render_priority = 3
+texture = ExtResource("2_rhh0u")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=282678521]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1478858387]
+shape = SubResource("SphereShape3D_orb")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

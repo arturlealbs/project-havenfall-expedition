@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://u8s3e8g780et"]
+
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_km06d"]
+[ext_resource type="Texture2D" uid="uid://80qrkpeo48ox" path="res://scenes/minigames/clicar na ordem/Jardim/1.png" id="1_xw3ha"]
+[ext_resource type="Texture2D" uid="uid://bpdqdqwud50e3" path="res://scenes/minigames/clicar na ordem/Jardim/2.png" id="2_bmw70"]
+[ext_resource type="Texture2D" uid="uid://dgdramdoavt5" path="res://scenes/minigames/clicar na ordem/Jardim/3.png" id="3_76f7o"]
+[ext_resource type="Texture2D" uid="uid://bp6we8lp6sokc" path="res://scenes/minigames/clicar na ordem/Jardim/4.png" id="4_pkqxq"]
+[ext_resource type="Texture2D" uid="uid://c5pj2x62u0fe6" path="res://scenes/minigames/clicar na ordem/Jardim/5.png" id="5_5vajj"]
+[ext_resource type="Texture2D" uid="uid://cjn3xaa8p8gkx" path="res://scenes/minigames/clicar na ordem/Jardim/6.png" id="6_u7v67"]
+
+[resource]
+script = ExtResource("1_km06d")
+titulo_fase = "Criando um Jardim de Chuva na Calçada"
+imagens_passos = Array[Texture2D]([ExtResource("1_xw3ha"), ExtResource("2_bmw70"), ExtResource("3_76f7o"), ExtResource("4_pkqxq"), ExtResource("5_5vajj"), ExtResource("6_u7v67")])
+descricoes_passos = Array[String](["Escolher um local baixo na calçada", "Cavar uma bacia na terra", "", "", "", ""])

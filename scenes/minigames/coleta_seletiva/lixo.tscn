@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b1something"]
+
+[ext_resource type="Script" path="res://scenes/minigames/coleta_seletiva/lixo.gd" id="1_script"]
+
+[node name="Lixo" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_script")

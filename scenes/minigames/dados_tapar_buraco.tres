@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://dqoedn6jptdyl"]
+
+[ext_resource type="PackedScene" uid="uid://cjh0nvh8hyav4" path="res://scenes/minigames/clicar_nos_botoes.tscn" id="1_c7n7n"]
+[ext_resource type="Texture2D" uid="uid://cuxcm3n7c0xa8" path="res://scenes/minigames/tapar_buracos/thumbnail_buraco.png" id="1_fr6n4"]
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="1_spoh4"]
+[ext_resource type="Texture2D" uid="uid://bck4a737bcf1f" path="res://assets/ui/03b90549-5fd5-4df3-9d58-f09b18abef34.png" id="3_fr6n4"]
+
+[resource]
+script = ExtResource("1_spoh4")
+nome = "Tape os Buracos"
+simbolo_3d = ExtResource("3_fr6n4")
+imagem_menu = ExtResource("1_fr6n4")
+minigame_scene = ExtResource("1_c7n7n")

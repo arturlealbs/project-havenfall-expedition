@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://c3opct46o7523"]
+
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="1_g4n6j"]
+[ext_resource type="Texture2D" uid="uid://ds3ny60ctb4y0" path="res://scenes/minigames/apagar_incendio/thumbnail_incendio.png" id="1_vowht"]
+[ext_resource type="PackedScene" uid="uid://u7tyaccbfn1l" path="res://scenes/minigames/apagar_incendio/apagar_incendio.tscn" id="2_s5v1o"]
+[ext_resource type="Texture2D" uid="uid://c68nlddnex01n" path="res://assets/ui/967801b3-bdac-456e-abc7-bfaa37bce032.png" id="4_8twg5"]
+
+[resource]
+script = ExtResource("1_g4n6j")
+nome = "Combater Queimadas"
+simbolo_3d = ExtResource("4_8twg5")
+imagem_menu = ExtResource("1_vowht")
+minigame_scene = ExtResource("2_s5v1o")

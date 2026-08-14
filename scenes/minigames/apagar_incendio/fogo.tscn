@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://e1something"]
+
+[ext_resource type="Script" uid="uid://tr0fuxi3pt6c" path="res://scenes/minigames/apagar_incendio/fogo.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://5uaobtoqr11b" path="res://assets/fire_particle.png" id="2_wnna2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fogo"]
+radius = 40.0
+
+[node name="Fogo" type="Area2D" unique_id=2056552206 groups=["fogo"]]
+z_index = 10
+script = ExtResource("1_script")
+dano_por_segundo = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=194983798]
+shape = SubResource("CircleShape2D_fogo")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=500647999]
+amount = 30
+texture = ExtResource("2_wnna2")
+lifetime = 0.8
+emission_shape = 1
+emission_sphere_radius = 30.0
+spread = 84.25
+gravity = Vector2(0, -200)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+angular_velocity_max = 32.49
+scale_amount_min = 0.5
+scale_amount_max = 3.0
+color = Color(0.9999997, 0.60704005, 0.28190753, 1)

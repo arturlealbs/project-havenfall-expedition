@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c2something"]
+
+[ext_resource type="Script" path="res://scenes/minigames/coleta_seletiva/lixeira.gd" id="1_script"]
+
+[node name="Lixeira" type="TextureRect"]
+custom_minimum_size = Vector2(100, 150)
+offset_right = 100.0
+offset_bottom = 150.0
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_script")

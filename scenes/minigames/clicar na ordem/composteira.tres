@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://bi2gyr8suy7m5"]
+
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_adhtr"]
+[ext_resource type="Texture2D" uid="uid://b2xeeb8gmlbpf" path="res://scenes/minigames/clicar na ordem/Composteira/1.png" id="1_bxb6y"]
+[ext_resource type="Texture2D" uid="uid://dh4j7drtbdwlf" path="res://scenes/minigames/clicar na ordem/Composteira/2.png" id="2_0rcg3"]
+[ext_resource type="Texture2D" uid="uid://digq3olgadld1" path="res://scenes/minigames/clicar na ordem/Composteira/3.png" id="3_6bb81"]
+[ext_resource type="Texture2D" uid="uid://c1n710qo5hwbr" path="res://scenes/minigames/clicar na ordem/Composteira/4.png" id="4_exdck"]
+[ext_resource type="Texture2D" uid="uid://dfoiuf1o8w8oo" path="res://scenes/minigames/clicar na ordem/Composteira/5.png" id="5_qrips"]
+[ext_resource type="Texture2D" uid="uid://gyymumr5vtme" path="res://scenes/minigames/clicar na ordem/Composteira/6.png" id="6_gblk0"]
+
+[resource]
+script = ExtResource("1_adhtr")
+titulo_fase = "Montando uma Composteira Caseira"
+imagens_passos = Array[Texture2D]([ExtResource("1_bxb6y"), ExtResource("2_0rcg3"), ExtResource("3_6bb81"), ExtResource("4_exdck"), ExtResource("5_qrips"), ExtResource("6_gblk0")])
+descricoes_passos = Array[String](["Pegar um recipiente", "Fazer furos de ventilação", "Colocar folhas secas", "Adicionar restos de alimentos", "Cobrir com mais folhas", "Produzir adubo"])

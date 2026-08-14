@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dw470vfwmt4tj"]
+[gd_scene format=3 uid="uid://cjh0nvh8hyav4"]
 
 [ext_resource type="Script" uid="uid://c1ssoho3f2lmt" path="res://scenes/minigames/clicar_nos_botoes.gd" id="1_1g85f"]
 [ext_resource type="PackedScene" uid="uid://bbp67r78ox6hu" path="res://scenes/minigames/button.tscn" id="2_rjvyb"]
@@ -30,7 +30,7 @@ script = ExtResource("1_1g85f")
 buraco_scene = ExtResource("2_rjvyb")
 imagens_fundo = Array[Texture2D]([ExtResource("3_ojtk4"), ExtResource("4_d277r"), ExtResource("5_72d0l"), ExtResource("6_poo6h"), ExtResource("7_jc73u")])
 imagens_buraco = Array[Texture2D]([ExtResource("8_6axer"), ExtResource("9_pumok"), ExtResource("10_wclsp"), ExtResource("11_7eyvl"), ExtResource("12_4ajtg"), ExtResource("13_xtj22"), ExtResource("14_ldmiu"), ExtResource("15_mlx6y"), ExtResource("16_eo3w1"), ExtResource("17_0l672"), ExtResource("18_v8rnv")])
-tamanho_base_buraco = Vector2(120, 120)
+tamanho_base_buraco = Vector2(150, 150)
 quantidade = 20
 
 [node name="Background" type="TextureRect" parent="." unique_id=2062933197]
@@ -69,3 +69,19 @@ anchor_right = 1.0
 offset_bottom = 27.0
 grow_horizontal = 2
 show_percentage = false
+
+[node name="CounterLabel" type="Label" parent="." unique_id=170246752]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 35.0
+offset_right = -15.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "Buracos: 0"
+horizontal_alignment = 2

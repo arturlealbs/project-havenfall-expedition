@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://b85w76fkqgoeo"]
+
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_cs4am"]
+[ext_resource type="Texture2D" uid="uid://bytnup3ja3ril" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa1.png" id="1_qhcu5"]
+[ext_resource type="Texture2D" uid="uid://c0l2j6d0e4wly" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa2.png" id="2_xeo2v"]
+[ext_resource type="Texture2D" uid="uid://b0obs08jjx7yt" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa3.png" id="3_uhplj"]
+[ext_resource type="Texture2D" uid="uid://dqesxrs00d7o7" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa4.png" id="4_ep8wv"]
+[ext_resource type="Texture2D" uid="uid://flcbw8qmbkfv" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa5.png" id="5_a628a"]
+[ext_resource type="Texture2D" uid="uid://bnkvncqdkh0tj" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa6.png" id="6_sfevu"]
+[ext_resource type="Texture2D" uid="uid://bhx0vlerajd5g" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa7.png" id="7_28i0c"]
+[ext_resource type="Texture2D" uid="uid://dkpm0tg56cjea" path="res://scenes/minigames/clicar na ordem/Fossa/Etapa8.png" id="8_nlyaw"]
+
+[resource]
+script = ExtResource("1_cs4am")
+titulo_fase = "Fazendo uma Fossa Séptica"
+imagens_passos = Array[Texture2D]([ExtResource("1_qhcu5"), ExtResource("2_xeo2v"), ExtResource("3_uhplj"), ExtResource("4_ep8wv"), ExtResource("5_a628a"), ExtResource("6_sfevu"), ExtResource("7_28i0c"), ExtResource("8_nlyaw")])
+descricoes_passos = Array[String](["Planejar o sistema
+", "Escolher o local", "Preparar a área", "Instalar o tanque", "Conectar os canos", "Cobrir a estrutura", "Receber águas usadas", "Tratar os resíduos"])

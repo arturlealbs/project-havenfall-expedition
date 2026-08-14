@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://ceq5mc1nfscxb"]
+
+[ext_resource type="Texture2D" uid="uid://xbvs8uehxxdv" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/1.png" id="1_7belr"]
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_dtjtc"]
+[ext_resource type="Texture2D" uid="uid://b25nrq8ov5uxl" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/2.png" id="2_xgb5a"]
+[ext_resource type="Texture2D" uid="uid://d10t866iihey4" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/3.png" id="3_nfyvd"]
+[ext_resource type="Texture2D" uid="uid://dvrnl642vhgen" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/4.png" id="4_jkqda"]
+[ext_resource type="Texture2D" uid="uid://ccyvt7cko7lst" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/5.png" id="5_s07jy"]
+[ext_resource type="Texture2D" uid="uid://bwwbwnsijua3g" path="res://scenes/minigames/clicar na ordem/Reciclagem de papel/6.png" id="6_3ndf2"]
+
+[resource]
+script = ExtResource("1_dtjtc")
+titulo_fase = "Ciclo da Reciclagem de Papel"
+imagens_passos = Array[Texture2D]([ExtResource("1_7belr"), ExtResource("2_xgb5a"), ExtResource("3_nfyvd"), ExtResource("4_jkqda"), ExtResource("5_s07jy"), ExtResource("6_3ndf2")])
+descricoes_passos = Array[String](["Separar papéis velhos e rasgados", "Deixar de molho na água com cola", "Bater tudo no liquidificador", "Espalhar a pasta em uma peneira", "Pressionar com um pano para secar", "Pendurar a nova folha no varal"])

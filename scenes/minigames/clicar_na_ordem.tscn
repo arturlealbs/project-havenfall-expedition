@@ -1,9 +1,22 @@
-[gd_scene format=3 uid="uid://xr1l2ocrxvh1"]
+[gd_scene format=3 uid="uid://4edhddhxwvwk"]
 
-[ext_resource type="Script" uid="uid://cbqcehowb6um" path="res://scenes/minigames/button.gd" id="1_i2e8a"]
 [ext_resource type="Script" uid="uid://clk12okmn080g" path="res://scenes/minigames/clicar_na_ordem.gd" id="1_ksagx"]
+[ext_resource type="PackedScene" path="res://scenes/minigames/botao_ordem.tscn" id="2_scene"]
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="2_yioie"]
+[ext_resource type="Resource" uid="uid://waek7cap13h2" path="res://scenes/minigames/clicar na ordem/agua_chuva.tres" id="3_sl5b8"]
+[ext_resource type="Resource" uid="uid://cf53b4m5ivhq2" path="res://scenes/minigames/clicar na ordem/telhado_verde.tres" id="3_yioie"]
+[ext_resource type="Resource" uid="uid://bi2gyr8suy7m5" path="res://scenes/minigames/clicar na ordem/composteira.tres" id="4_pm6uj"]
+[ext_resource type="Resource" uid="uid://b85w76fkqgoeo" path="res://scenes/minigames/clicar na ordem/fossa.tres" id="4_sl5b8"]
+[ext_resource type="Resource" uid="uid://h11xols80pbg" path="res://scenes/minigames/clicar na ordem/energia_solar.tres" id="5_cu3oe"]
+[ext_resource type="Resource" uid="uid://u8s3e8g780et" path="res://scenes/minigames/clicar na ordem/jardim.tres" id="7_4jcjl"]
+[ext_resource type="Resource" uid="uid://01djtp0ek5qu" path="res://scenes/minigames/clicar na ordem/plantar_arvore.tres" id="8_phboi"]
+[ext_resource type="Resource" uid="uid://ceq5mc1nfscxb" path="res://scenes/minigames/clicar na ordem/reciclagem_papel.tres" id="9_b2fbo"]
+[ext_resource type="Resource" uid="uid://cjph8qxooc187" path="res://scenes/minigames/clicar na ordem/lixo.tres" id="11_b2fbo"]
+[ext_resource type="Texture2D" uid="uid://c16nk514g17mt" path="res://assets/ui/57badc12-6a3e-4009-9c34-ef7ba0a550cd.png" id="12_cu3oe"]
+[ext_resource type="Texture2D" uid="uid://bnqkdvcnjpdux" path="res://assets/ui/86df65f1-de44-4fe1-b72e-6cea8cca6bc7.png" id="13_phboi"]
+[ext_resource type="Texture2D" uid="uid://b1muha35njaaw" path="res://assets/ui/6d558a4d-d1dd-475d-bf6f-985d5f9e169e.png" id="14_b2fbo"]
 
-[node name="ClicarNaOrdem" type="Control" unique_id=69916150]
+[node name="ClicarNaOrdem" type="Control" unique_id=224072043]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,8 +24,27 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ksagx")
+fases = Array[ExtResource("2_yioie")]([ExtResource("3_sl5b8"), ExtResource("4_pm6uj"), ExtResource("5_cu3oe"), ExtResource("4_sl5b8"), ExtResource("7_4jcjl"), ExtResource("8_phboi"), ExtResource("9_b2fbo"), ExtResource("3_yioie"), ExtResource("11_b2fbo")])
+button_scene = ExtResource("2_scene")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1377912997]
+[node name="PainelAjuda2" type="TextureRect" parent="." unique_id=1412118315]
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -784.0
+offset_top = -591.0
+offset_right = 779.0
+offset_bottom = 524.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_phboi")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=514847479]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,76 +59,71 @@ theme_override_constants/h_separation = 50
 theme_override_constants/v_separation = 50
 columns = 4
 
-[node name="Button" type="Button" parent="GridContainer" unique_id=147184108]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "1"
-script = ExtResource("1_i2e8a")
-id = 1
+[node name="BotaoAjuda" type="TextureButton" parent="." unique_id=1613650882]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 140.0
+grow_horizontal = 0
+texture_normal = ExtResource("12_cu3oe")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button2" type="Button" parent="GridContainer" unique_id=1744397910]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "2
-"
-script = ExtResource("1_i2e8a")
-id = 2
+[node name="PainelAjuda" type="TextureRect" parent="." unique_id=1796852997]
+visible = false
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_phboi")
+expand_mode = 1
 
-[node name="Button3" type="Button" parent="GridContainer" unique_id=272605528]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "3
-"
-script = ExtResource("1_i2e8a")
-id = 3
+[node name="TextureRect" type="TextureRect" parent="PainelAjuda" unique_id=446640213]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.5
+offset_top = 8.0
+offset_right = 128.5
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("14_b2fbo")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="Button4" type="Button" parent="GridContainer" unique_id=1861187210]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "4
-"
-script = ExtResource("1_i2e8a")
-id = 4
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelAjuda" unique_id=431692360]
+custom_minimum_size = Vector2(360, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -129.0
+offset_right = 225.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button5" type="Button" parent="GridContainer" unique_id=859208095]
+[node name="VBoxContainer" type="VBoxContainer" parent="PainelAjuda/ScrollContainer" unique_id=933860592]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "5"
-script = ExtResource("1_i2e8a")
-id = 5
+theme_override_constants/separation = 15
 
-[node name="Button6" type="Button" parent="GridContainer" unique_id=836074372]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-script = ExtResource("1_i2e8a")
-id = 6
-
-[node name="Button7" type="Button" parent="GridContainer" unique_id=1024628527]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "1"
-script = ExtResource("1_i2e8a")
-id = 7
-
-[node name="Button8" type="Button" parent="GridContainer" unique_id=1972112272]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 120
-text = "1"
-script = ExtResource("1_i2e8a")
-id = 8
+[connection signal="pressed" from="BotaoAjuda" to="." method="_on_botao_ajuda_pressed"]

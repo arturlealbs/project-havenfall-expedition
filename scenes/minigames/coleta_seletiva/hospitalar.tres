@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://bqgfwuwxtk1ei"]
+
+[ext_resource type="Texture2D" uid="uid://d2ufarc8t2xg4" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L7.png" id="1_oqhy1"]
+[ext_resource type="Texture2D" uid="uid://do7ain14jx0fy" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0001_Camada-57.png" id="2_8uncf"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="2_vjq75"]
+[ext_resource type="Texture2D" uid="uid://1o4vvrs8sg3k" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0002_Camada-58.png" id="3_0yyqu"]
+[ext_resource type="Texture2D" uid="uid://bmfx3jp4f6q4j" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0003_Camada-59.png" id="4_05fox"]
+[ext_resource type="Texture2D" uid="uid://b5a361hxgwxo2" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0004_Camada-60.png" id="5_xbcjc"]
+[ext_resource type="Texture2D" uid="uid://c8runndtgnvot" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0005_Camada-61.png" id="6_its10"]
+[ext_resource type="Texture2D" uid="uid://dmorgsk6gm4hy" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0006_Camada-62.png" id="7_4b4r4"]
+[ext_resource type="Texture2D" uid="uid://dg04n6gjun2ej" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos de hospitais e serviço de saúde/Sem-Título-1_0007_Camada-63.png" id="8_58ual"]
+
+[resource]
+script = ExtResource("2_vjq75")
+nome_categoria = "Hospitalar"
+imagem_lixeira = ExtResource("1_oqhy1")
+imagens_lixos = Array[Texture2D]([ExtResource("2_8uncf"), ExtResource("3_0yyqu"), ExtResource("4_05fox"), ExtResource("5_xbcjc"), ExtResource("6_its10"), ExtResource("7_4b4r4"), ExtResource("8_58ual")])

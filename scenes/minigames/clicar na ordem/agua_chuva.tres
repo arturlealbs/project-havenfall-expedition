@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://waek7cap13h2"]
+
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_7qnbu"]
+[ext_resource type="Texture2D" uid="uid://ds4nmesjwmi3y" path="res://scenes/minigames/clicar na ordem/Água da Chuva/1.png" id="1_q4bh6"]
+[ext_resource type="Texture2D" uid="uid://bctfabhtch662" path="res://scenes/minigames/clicar na ordem/Água da Chuva/2.png" id="2_4yscc"]
+[ext_resource type="Texture2D" uid="uid://dp77na35jjhk8" path="res://scenes/minigames/clicar na ordem/Água da Chuva/3.png" id="3_io74k"]
+[ext_resource type="Texture2D" uid="uid://cwhs477gy0ik4" path="res://scenes/minigames/clicar na ordem/Água da Chuva/4.png" id="4_unx60"]
+
+[resource]
+script = ExtResource("1_7qnbu")
+titulo_fase = "Economizando Água na Chuva "
+imagens_passos = Array[Texture2D]([ExtResource("1_q4bh6"), ExtResource("2_4yscc"), ExtResource("3_io74k"), ExtResource("4_unx60")])
+descricoes_passos = Array[String](["Colocar o balde embaixo da calha", "Esperar a chuva passar", "Filtrar as folhinhas da água", "Usar a água para lavar o quintal"])

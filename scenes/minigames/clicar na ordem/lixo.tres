@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://cjph8qxooc187"]
+
+[ext_resource type="Texture2D" uid="uid://cq30xbbmh88ad" path="res://scenes/minigames/clicar na ordem/Lixo/1.png" id="1_n5hca"]
+[ext_resource type="Texture2D" uid="uid://dg4mbs2t4hbtq" path="res://scenes/minigames/clicar na ordem/Lixo/2.png" id="2_yaygr"]
+[ext_resource type="Texture2D" uid="uid://q0565uh7c77r" path="res://scenes/minigames/clicar na ordem/Lixo/3.png" id="3_igxe3"]
+[ext_resource type="Texture2D" uid="uid://b03amydbob1g4" path="res://scenes/minigames/clicar na ordem/Lixo/4.png" id="4_xwg6i"]
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="9_fcxbg"]
+
+[resource]
+script = ExtResource("9_fcxbg")
+titulo_fase = "Separar lixo reciclável"
+imagens_passos = Array[Texture2D]([ExtResource("1_n5hca"), ExtResource("2_yaygr"), ExtResource("3_igxe3"), ExtResource("4_xwg6i")])
+descricoes_passos = Array[String](["Juntar os resíduos", "Separar os recicláveis", "Colocar nas lixeiras corretas", "Enviar para reciclagem"])

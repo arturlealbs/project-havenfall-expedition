@@ -1,0 +1,310 @@
+[gd_scene format=3 uid="uid://u7tyaccbfn1l"]
+
+[ext_resource type="Script" uid="uid://ckcjq3pvq4njx" path="res://scenes/minigames/apagar_incendio/apagar_incendio.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://e1something" path="res://scenes/minigames/apagar_incendio/fogo.tscn" id="2_scene"]
+[ext_resource type="Texture2D" uid="uid://b5t3pong2sodm" path="res://scenes/minigames/apagar_incendio/Cenários/cenario 1.png" id="3_cenario1"]
+[ext_resource type="Texture2D" uid="uid://beva62rqhbjjs" path="res://scenes/minigames/apagar_incendio/Cenários/cenario 2.png" id="4_cenario2"]
+[ext_resource type="Texture2D" uid="uid://bpiujdlhmvr5e" path="res://scenes/minigames/apagar_incendio/Cenários/cenario 3.png" id="5_cenario3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_water"]
+radius = 30.0
+
+[node name="ApagarIncendio" type="Control" unique_id=679472471]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+fogo_scene = ExtResource("2_scene")
+
+[node name="Cenarios" type="Control" parent="." unique_id=1168158214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cenario1" type="TextureRect" parent="Cenarios" unique_id=1613823374]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cenario1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PontosDeFogo" type="Node2D" parent="Cenarios/Cenario1" unique_id=1420470075]
+
+[node name="Marker2D" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=764940786]
+position = Vector2(304, 509)
+
+[node name="Marker2D29" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1370628783]
+position = Vector2(426, 341)
+
+[node name="Marker2D30" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1462077949]
+position = Vector2(466, 341)
+
+[node name="Marker2D31" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=308783189]
+position = Vector2(250, 322)
+
+[node name="Marker2D32" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=185575977]
+position = Vector2(668, 346)
+
+[node name="Marker2D33" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=442943355]
+position = Vector2(700, 330)
+
+[node name="Marker2D2" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1364890905]
+position = Vector2(262, 509)
+
+[node name="Marker2D18" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1179938335]
+position = Vector2(193, 520)
+
+[node name="Marker2D19" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1991943441]
+position = Vector2(185, 491)
+
+[node name="Marker2D20" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1085858682]
+position = Vector2(145, 467)
+
+[node name="Marker2D21" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1237213808]
+position = Vector2(129, 432)
+
+[node name="Marker2D22" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1527977873]
+position = Vector2(46, 429)
+
+[node name="Marker2D23" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=827335458]
+position = Vector2(30, 384)
+
+[node name="Marker2D24" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1777002974]
+position = Vector2(62, 373)
+
+[node name="Marker2D25" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=713736318]
+position = Vector2(38, 333)
+
+[node name="Marker2D26" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=499674067]
+position = Vector2(51, 530)
+
+[node name="Marker2D27" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1825174049]
+position = Vector2(115, 527)
+
+[node name="Marker2D28" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=527311715]
+position = Vector2(88, 471)
+
+[node name="Marker2D3" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1390675343]
+position = Vector2(259, 460)
+
+[node name="Marker2D6" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1979495197]
+position = Vector2(259, 460)
+
+[node name="Marker2D4" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1549130391]
+position = Vector2(912, 416)
+
+[node name="Marker2D7" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1677196311]
+position = Vector2(960, 395)
+
+[node name="Marker2D8" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=151544393]
+position = Vector2(1000, 360)
+
+[node name="Marker2D9" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=746772979]
+position = Vector2(1059, 357)
+
+[node name="Marker2D10" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=978690277]
+position = Vector2(1056, 309)
+
+[node name="Marker2D11" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=731672127]
+position = Vector2(1035, 397)
+
+[node name="Marker2D12" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=437305244]
+position = Vector2(929, 464)
+
+[node name="Marker2D13" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=511146284]
+position = Vector2(993, 504)
+
+[node name="Marker2D14" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1290939151]
+position = Vector2(1033, 502)
+
+[node name="Marker2D15" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=2057340661]
+position = Vector2(1089, 499)
+
+[node name="Marker2D16" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=1442602753]
+position = Vector2(1068, 464)
+
+[node name="Marker2D17" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=724300377]
+position = Vector2(988, 459)
+
+[node name="Marker2D5" type="Marker2D" parent="Cenarios/Cenario1/PontosDeFogo" unique_id=433330048]
+position = Vector2(500, 500)
+
+[node name="Cenario2" type="TextureRect" parent="Cenarios" unique_id=1396496476]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cenario2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PontosDeFogo" type="Node2D" parent="Cenarios/Cenario2" unique_id=447257156]
+
+[node name="Marker2D" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=2057794746]
+position = Vector2(155, 429)
+
+[node name="Marker2D6" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=938769610]
+position = Vector2(160, 368)
+
+[node name="Marker2D7" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=775448397]
+position = Vector2(160, 301)
+
+[node name="Marker2D8" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=516914012]
+position = Vector2(227, 503)
+
+[node name="Marker2D9" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1527530320]
+position = Vector2(219, 423)
+
+[node name="Marker2D10" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1186880321]
+position = Vector2(232, 338)
+
+[node name="Marker2D11" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1387389957]
+position = Vector2(360, 519)
+
+[node name="Marker2D12" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1143265383]
+position = Vector2(363, 442)
+
+[node name="Marker2D13" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=261323707]
+position = Vector2(770, 391)
+
+[node name="Marker2D14" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1912506465]
+position = Vector2(735, 370)
+
+[node name="Marker2D15" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=869844831]
+position = Vector2(490, 341)
+
+[node name="Marker2D16" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=764382542]
+position = Vector2(674, 336)
+
+[node name="Marker2D17" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1986217546]
+position = Vector2(669, 307)
+
+[node name="Marker2D18" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=426003832]
+position = Vector2(485, 302)
+
+[node name="Marker2D19" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1347242308]
+position = Vector2(1044, 592)
+
+[node name="Marker2D20" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1473194630]
+position = Vector2(1105, 416)
+
+[node name="Marker2D21" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1303065021]
+position = Vector2(1022, 365)
+
+[node name="Marker2D22" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=341934780]
+position = Vector2(93, 410)
+
+[node name="Marker2D2" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=2089364946]
+position = Vector2(400, 200)
+
+[node name="Marker2D3" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=931941505]
+position = Vector2(600, 300)
+
+[node name="Marker2D4" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=1402955124]
+position = Vector2(800, 400)
+
+[node name="Marker2D5" type="Marker2D" parent="Cenarios/Cenario2/PontosDeFogo" unique_id=602973308]
+position = Vector2(500, 500)
+
+[node name="Cenario3" type="TextureRect" parent="Cenarios" unique_id=1753515572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_cenario3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PontosDeFogo" type="Node2D" parent="Cenarios/Cenario3" unique_id=1809941922]
+
+[node name="Marker2D" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=340576524]
+position = Vector2(344, 605)
+
+[node name="Marker2D6" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1378129118]
+position = Vector2(357, 544)
+
+[node name="Marker2D7" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1046156653]
+position = Vector2(259, 507)
+
+[node name="Marker2D8" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1130313647]
+position = Vector2(235, 483)
+
+[node name="Marker2D9" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=2075542065]
+position = Vector2(121, 464)
+
+[node name="Marker2D10" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=252085920]
+position = Vector2(864, 501)
+
+[node name="Marker2D11" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=735565150]
+position = Vector2(947, 512)
+
+[node name="Marker2D12" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1605602202]
+position = Vector2(1048, 547)
+
+[node name="Marker2D13" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1399876343]
+position = Vector2(1120, 486)
+
+[node name="Marker2D14" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=796958740]
+position = Vector2(1029, 462)
+
+[node name="Marker2D15" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=871997575]
+position = Vector2(949, 459)
+
+[node name="Marker2D16" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=77431183]
+position = Vector2(912, 406)
+
+[node name="Marker2D17" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=342745041]
+position = Vector2(907, 342)
+
+[node name="Marker2D18" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=2070797247]
+position = Vector2(635, 353)
+
+[node name="Marker2D19" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=447439498]
+position = Vector2(638, 321)
+
+[node name="Marker2D2" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=607382272]
+position = Vector2(560, 370)
+
+[node name="Marker2D3" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1281931549]
+position = Vector2(600, 300)
+
+[node name="Marker2D4" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=1922491984]
+position = Vector2(800, 400)
+
+[node name="Marker2D5" type="Marker2D" parent="Cenarios/Cenario3/PontosDeFogo" unique_id=3003144]
+position = Vector2(500, 500)
+
+[node name="WaterJet" type="Line2D" parent="." unique_id=1742093720]
+visible = false
+points = PackedVector2Array(0, 0, 100, 100)
+width = 25.0
+default_color = Color(0, 0.615686, 1, 0.705882)
+
+[node name="WaterHitbox" type="Area2D" parent="." unique_id=1886073007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHitbox" unique_id=338095825]
+shape = SubResource("CircleShape2D_water")
+
+[node name="GameTimer" type="Timer" parent="." unique_id=912371009]
+wait_time = 45.0
+autostart = true
+
+[node name="SpreadTimer" type="Timer" parent="." unique_id=499140225]
+wait_time = 3.0
+autostart = true

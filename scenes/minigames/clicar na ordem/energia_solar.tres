@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://h11xols80pbg"]
+
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_8x3ma"]
+[ext_resource type="Texture2D" uid="uid://co71dukdx2odm" path="res://scenes/minigames/clicar na ordem/Energia Solar/1.png" id="1_vcv2j"]
+[ext_resource type="Texture2D" uid="uid://qo0kewfgeopg" path="res://scenes/minigames/clicar na ordem/Energia Solar/2.png" id="2_swbgu"]
+[ext_resource type="Texture2D" uid="uid://du8mi15oueare" path="res://scenes/minigames/clicar na ordem/Energia Solar/3.png" id="3_s6y7p"]
+[ext_resource type="Texture2D" uid="uid://cjqckd53bpyqb" path="res://scenes/minigames/clicar na ordem/Energia Solar/4.png" id="4_bcxo5"]
+[ext_resource type="Texture2D" uid="uid://c562wagxmuurs" path="res://scenes/minigames/clicar na ordem/Energia Solar/5.png" id="5_sy5mi"]
+[ext_resource type="Texture2D" uid="uid://bbsw1jxc62avo" path="res://scenes/minigames/clicar na ordem/Energia Solar/6.png" id="6_n8yxk"]
+[ext_resource type="Texture2D" uid="uid://4hjkla7qcpgk" path="res://scenes/minigames/clicar na ordem/Energia Solar/7.png" id="7_3kop3"]
+[ext_resource type="Texture2D" uid="uid://tdic7vvkmrdi" path="res://scenes/minigames/clicar na ordem/Energia Solar/8.png" id="8_3yamv"]
+
+[resource]
+script = ExtResource("1_8x3ma")
+titulo_fase = "Instalando um Sistema de Energia Solar"
+imagens_passos = Array[Texture2D]([ExtResource("1_vcv2j"), ExtResource("2_swbgu"), ExtResource("3_s6y7p"), ExtResource("4_bcxo5"), ExtResource("5_sy5mi"), ExtResource("6_n8yxk"), ExtResource("7_3kop3"), ExtResource("8_3yamv")])
+descricoes_passos = Array[String](["Limpar e medir o telhado da casa", "Fixar os suportes de metal nas telhas", "Encaixar os painéis solares nos suportes", "Passar os cabos elétricos até o interior", "Conectar os cabos no inversor de energia", "Ligar o sistema no quadro de luz da casa", "Esperar o sol aparecer no céu", "Ligar a TV com energia limpa"])

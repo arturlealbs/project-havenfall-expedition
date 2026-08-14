@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://dgph3vv1khgpy"]
+
+[ext_resource type="Texture2D" uid="uid://c8e1sjcxw3q02" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L8.png" id="1_g72bu"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_ihqya"]
+[ext_resource type="Texture2D" uid="uid://bru6aqi3ij86b" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo radioativo/Sem-Título-1_0001_Camada-65.png" id="2_kg7kl"]
+[ext_resource type="Texture2D" uid="uid://cw771txqjxive" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo radioativo/Sem-Título-1_0002_Camada-66.png" id="3_yfd8o"]
+[ext_resource type="Texture2D" uid="uid://b2i45k7ohrwfv" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo radioativo/Sem-Título-1_0003_Camada-67.png" id="4_vcvvk"]
+
+[resource]
+script = ExtResource("1_ihqya")
+nome_categoria = "Radioativo"
+imagem_lixeira = ExtResource("1_g72bu")
+imagens_lixos = Array[Texture2D]([ExtResource("2_kg7kl"), ExtResource("3_yfd8o"), ExtResource("4_vcvvk")])

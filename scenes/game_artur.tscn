@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://cqskuuw8reurs"]
+
+[ext_resource type="Script" uid="uid://b1p1lnectvs25" path="res://scenes/test_level/game.gd" id="1_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bofx5wyp8403k" path="res://entities/player/player_3d_template.tscn" id="2_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://scenes/test_level/interactable/flag/flag_reached_screen.tscn" id="3_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cnedxfn2pxh2t" path="res://scenes/test_level/level.tscn" id="4_kvuet"]
+[ext_resource type="PackedScene" uid="uid://ddhq0wcacgc0m" path="res://olinda_6.tscn" id="5_trtic"]
+[ext_resource type="Texture2D" uid="uid://dktrsl2tqq1jr" path="res://assets/Ajuste de deslocamento HSL.png" id="6_ir15t"]
+[ext_resource type="PackedScene" uid="uid://bmxwa0mmnvioh" path="res://scenes/test_level/platforms/PlataformaA.tscn" id="7_ca42v"]
+[ext_resource type="PackedScene" uid="uid://bujgldvqltgng" path="res://scenes/test_level/platforms/PlataformaB.tscn" id="8_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dfrhxfvra0v5o" path="res://scenes/test_level/platforms/PlataformaC.tscn" id="9_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://dqrk50op1ivdd" path="res://scenes/test_level/platforms/PlataformaD.tscn" id="10_264po"]
+[ext_resource type="PackedScene" uid="uid://dnn5w7tgo532w" path="res://scenes/minigame_orb.tscn" id="11_wqm8h"]
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="12_2hcmw"]
+[ext_resource type="PackedScene" uid="uid://c83k48w1p3" path="res://scenes/MinigameManager.tscn" id="12_manager"]
+[ext_resource type="PackedScene" uid="uid://df5j8klqxw" path="res://scenes/HUD.tscn" id="13_hud"]
+[ext_resource type="Resource" uid="uid://c3opct46o7523" path="res://scenes/minigames/dados_apagar_incendio.tres" id="13_prsxd"]
+[ext_resource type="Resource" uid="uid://bpvmq16knvkd3" path="res://scenes/minigames/dados_clicar_na_ordem.tres" id="14_iumj0"]
+[ext_resource type="Resource" uid="uid://88flqn55lo8k" path="res://scenes/minigames/dados_coleta_seletiva.tres" id="15_hvg0x"]
+[ext_resource type="Resource" uid="uid://dqoedn6jptdyl" path="res://scenes/minigames/dados_tapar_buraco.tres" id="16_injaq"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7jwsp"]
+panorama = ExtResource("6_ir15t")
+energy_multiplier = 0.7
+
+[sub_resource type="Sky" id="Sky_0h0bb"]
+sky_material = SubResource("PanoramaSkyMaterial_7jwsp")
+
+[sub_resource type="Environment" id="Environment_c8g7m"]
+background_mode = 2
+sky = SubResource("Sky_0h0bb")
+ambient_light_source = 3
+ambient_light_color = Color(0.74902, 0.742654, 0.615273, 1)
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 2
+tonemap_exposure = 1.05
+tonemap_white = 0.95
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_intensity = 1.4
+glow_intensity = 4.98
+glow_strength = 0.26
+glow_bloom = 0.08
+glow_blend_mode = 0
+glow_hdr_threshold = 0.26
+glow_hdr_scale = 0.0
+glow_hdr_luminance_cap = 18.75
+glow_map_strength = 1.0
+fog_light_color = Color(0.843137, 0.737255, 0.329412, 1)
+fog_density = 0.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.0
+fog_height_density = 0.1
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
+volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
+
+[node name="Game" type="Node" unique_id=1626338255]
+script = ExtResource("1_vtaks")
+
+[node name="Player3DTemplate" parent="." unique_id=1404282923 instance=ExtResource("2_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43638, 0, -7.8513)
+wall_slide_gravity = -15.0
+wall_offset = 0.0
+tilt_lower_limit = -0.5
+
+[node name="FlagReachedScreen" parent="." unique_id=735488172 instance=ExtResource("3_dinhu")]
+
+[node name="Level" parent="." unique_id=823547301 instance=ExtResource("4_kvuet")]
+transform = Transform3D(0.8707937, 0, 0.49164864, 0, 1, 0, -0.49164864, 0, 0.8707937, 179.8309, -0.5206833, -26.609034)
+visible = false
+
+[node name="Olinda7" parent="." unique_id=1819045747 instance=ExtResource("5_trtic")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.43696713, 0)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=2104638732]
+environment = SubResource("Environment_c8g7m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1205521201]
+transform = Transform3D(-0.327016, 0.941731, -0.0787648, 0.688764, 0.294578, 0.662441, 0.647044, 0.162378, -0.744962, -47.2295, 26.8832, -28.0205)
+light_energy = 0.25
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
+
+[node name="Plataformas" type="Node" parent="." unique_id=604107201]
+
+[node name="PlataformaA" parent="Plataformas" unique_id=913740771 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.67361, -0.9, 50.622158)
+
+[node name="PlataformaA2" parent="Plataformas" unique_id=2001924624 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.674, -0.9, -6.486)
+
+[node name="PlataformaB" parent="Plataformas" unique_id=961704774 instance=ExtResource("8_rysoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.232, -0.9, -4.559)
+
+[node name="PlataformaA3" parent="Plataformas" unique_id=807508850 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.016283156, 0, 0.9998673, 0, 1, 0, -0.9998673, 0, 0.016283156, 51.93992, -0.9, -6.4434004)
+
+[node name="PlataformaA4" parent="Plataformas" unique_id=1421030847 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.38427913, 0, 0.9232168, 0, 1, 0, -0.9232168, 0, 0.38427913, 42.219604, -0.9, 41.421738)
+
+[node name="PlataformaC" parent="Plataformas" unique_id=1338971661 instance=ExtResource("9_ssvqc")]
+transform = Transform3D(0.27160847, 0, 0.9624078, 0, 1, 0, -0.9624078, 0, 0.27160847, 91.411736, -0.9, 60.57844)
+
+[node name="PlataformaD" parent="Plataformas" unique_id=700961054 instance=ExtResource("10_264po")]
+transform = Transform3D(0.38811085, 0, 0.9216127, 0, 1, 0, -0.9216127, 0, 0.38811085, 1.1928675, -0.9, 24.136116)
+
+[node name="PlataformaD2" parent="Plataformas" unique_id=692492815 instance=ExtResource("10_264po")]
+transform = Transform3D(0.020087438, 0, 0.9997983, 0, 1, 0, -0.9997983, 0, 0.020087438, 6.8996162, -0.9, -6.9598894)
+
+[node name="PlataformaA5" parent="Plataformas" unique_id=632236455 instance=ExtResource("7_ca42v")]
+transform = Transform3D(-0.0039793584, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, -0.0039793584, -37.679077, -0.9, -7.24873)
+
+[node name="PlataformaA6" parent="Plataformas" unique_id=1237510713 instance=ExtResource("7_ca42v")]
+transform = Transform3D(-0.3966193, 0, -0.9179833, 0, 1, 0, 0.9179833, 0, -0.3966193, -39.28805, -0.9, 6.800601)
+
+[node name="PlataformaB2" parent="Plataformas" unique_id=2066939045 instance=ExtResource("8_rysoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.34493, -0.9, -7.25971)
+
+[node name="PlataformaA7" parent="Plataformas" unique_id=1267769897 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.009791174, 0, 0.9999521, 0, 1, 0, -0.9999521, 0, 0.009791174, -130.13907, -0.9, -8.499065)
+
+[node name="PlataformaB3" parent="Plataformas" unique_id=1399572427 instance=ExtResource("8_rysoc")]
+transform = Transform3D(0.10888423, 0, -0.99405444, 0, 1, 0, 0.99405444, 0, 0.10888423, -127.198326, -0.9, -28.225609)
+
+[node name="PlataformaA8" parent="Plataformas" unique_id=265189063 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.996381, 0, 0.08499957, 0, 1, 0, -0.08499957, 0, 0.996381, -131.11255, -0.9, -74.67256)
+
+[node name="PlataformaC2" parent="Plataformas" unique_id=383050543 instance=ExtResource("9_ssvqc")]
+transform = Transform3D(0.06895557, 0, -0.99761975, 0, 1, 0, 0.99761975, 0, 0.06895557, -106.96425, -0.9, -85.46247)
+
+[node name="PlataformaA9" parent="Plataformas" unique_id=1389170493 instance=ExtResource("7_ca42v")]
+transform = Transform3D(-0.102479994, 0, 0.99473506, 0, 1, 0, -0.99473506, 0, -0.102479994, -54.495182, -0.9, -90.44904)
+
+[node name="PlataformaC3" parent="Plataformas" unique_id=525281403 instance=ExtResource("9_ssvqc")]
+transform = Transform3D(0.09713125, 0, -0.99527156, 0, 1, 0, 0.99527156, 0, 0.09713125, -2.0751376, -0.9, -97.45444)
+
+[node name="PlataformaA10" parent="Plataformas" unique_id=576753335 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.10525745, 0, -0.99444497, 0, 1, 0, 0.99444497, 0, 0.10525745, 50.89015, -0.9, -101.42724)
+
+[node name="PlataformaA11" parent="Plataformas" unique_id=328271754 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.522125, -0.9, -96.11661)
+
+[node name="PlataformaD3" parent="Plataformas" unique_id=848141877 instance=ExtResource("10_264po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69318, -0.9, -51.972527)
+
+[node name="PlataformaA12" parent="Plataformas" unique_id=130811676 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.65012, -0.9, -7.488018)
+
+[node name="PlataformaD4" parent="Plataformas" unique_id=1660819328 instance=ExtResource("10_264po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.09502, -0.9, -52.118557)
+
+[node name="PlataformaA13" parent="Plataformas" unique_id=1285426497 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.59421, -0.9, -96.3845)
+
+[node name="PlataformaA14" parent="Plataformas" unique_id=1738225027 instance=ExtResource("7_ca42v")]
+transform = Transform3D(0.021884676, 0, -0.9997605, 0, 1, 0, 0.9997605, 0, 0.021884676, 99.28016, -0.9, -104.583145)
+
+[node name="PlataformaA15" parent="Plataformas" unique_id=1392889339 instance=ExtResource("7_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.41535, -0.9, -7.8278074)
+
+[node name="MinigameManager" parent="." unique_id=1750505339 instance=ExtResource("12_manager")]
+minigames_disponiveis = Array[ExtResource("12_2hcmw")]([ExtResource("13_prsxd"), ExtResource("14_iumj0"), ExtResource("15_hvg0x"), ExtResource("16_injaq")])
+minigame_orb_scene = ExtResource("11_wqm8h")
+
+[node name="HUD" parent="." instance=ExtResource("13_hud")]
+
+[node name="SpawnPointsMinigames" type="Node3D" parent="." unique_id=1359546060 groups=["spawn_minigames"]]
+
+[node name="Marker3D" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1660585768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.454315, 2.3993092, -6.4443474)
+
+[node name="Marker3D2" type="Marker3D" parent="SpawnPointsMinigames" unique_id=596561876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.61814, 2.4236426, -7.996475)
+
+[node name="Marker3D3" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1678327703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9979, 5.396923, -6.213436)

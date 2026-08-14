@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://d2aa5dx3bb34k"]
+
+[ext_resource type="Texture2D" uid="uid://c4w11jmmo2e2s" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L6.png" id="1_2jcqm"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_snix6"]
+[ext_resource type="Texture2D" uid="uid://w1dm4knhfpaw" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0001_Camada-49.png" id="2_4hb1t"]
+[ext_resource type="Texture2D" uid="uid://cmro6g1jsvgvm" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0002_Camada-50.png" id="3_hc57i"]
+[ext_resource type="Texture2D" uid="uid://17t3ww8tc1w" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0003_Camada-51.png" id="4_uao0x"]
+[ext_resource type="Texture2D" uid="uid://crtl4ikuvn72h" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0004_Camada-52.png" id="5_eixdh"]
+[ext_resource type="Texture2D" uid="uid://cv5n0o50voa8y" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0005_Camada-53.png" id="6_iotlh"]
+[ext_resource type="Texture2D" uid="uid://dda57wo3d8b5p" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0006_Camada-54.png" id="7_b2fpu"]
+[ext_resource type="Texture2D" uid="uid://dsciaegtgtsif" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Resíduos perigosos/Sem-Título-1_0007_Camada-55.png" id="8_ac4bu"]
+
+[resource]
+script = ExtResource("1_snix6")
+nome_categoria = "Perigoso"
+imagem_lixeira = ExtResource("1_2jcqm")
+imagens_lixos = Array[Texture2D]([ExtResource("2_4hb1t"), ExtResource("3_hc57i"), ExtResource("4_uao0x"), ExtResource("5_eixdh"), ExtResource("6_iotlh"), ExtResource("7_b2fpu"), ExtResource("8_ac4bu")])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://ddjpftyieurhx"]
+
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_4qwr7"]
+[ext_resource type="Texture2D" uid="uid://ckouv0ryy6eaq" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L9.png" id="1_udjtx"]
+[ext_resource type="Texture2D" uid="uid://dviou8esphctn" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0001_Camada-69.png" id="2_dntjj"]
+[ext_resource type="Texture2D" uid="uid://cwcbk4tcrlh6i" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0002_Camada-70.png" id="3_rny81"]
+[ext_resource type="Texture2D" uid="uid://2c30vxunkx0g" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0003_Camada-71.png" id="4_hheb2"]
+[ext_resource type="Texture2D" uid="uid://cbjdm5m2yyio8" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0004_Camada-72.png" id="5_26aly"]
+[ext_resource type="Texture2D" uid="uid://byss5acmgb0p3" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0005_Camada-73.png" id="6_0u13b"]
+[ext_resource type="Texture2D" uid="uid://troq86r3e8be" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0006_Camada-74.png" id="7_v0u1i"]
+[ext_resource type="Texture2D" uid="uid://87gr8lfditpk" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo orgânico/Sem-Título-1_0007_Camada-75.png" id="8_mnkdo"]
+
+[resource]
+script = ExtResource("1_4qwr7")
+nome_categoria = "Orgânico"
+imagem_lixeira = ExtResource("1_udjtx")
+imagens_lixos = Array[Texture2D]([ExtResource("2_dntjj"), ExtResource("3_rny81"), ExtResource("4_hheb2"), ExtResource("5_26aly"), ExtResource("6_0u13b"), ExtResource("7_v0u1i"), ExtResource("8_mnkdo")])

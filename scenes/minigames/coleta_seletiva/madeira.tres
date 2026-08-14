@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://dlnepm5436yjy"]
+
+[ext_resource type="Texture2D" uid="uid://cplh6vohj7u58" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L5.png" id="1_la50l"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_xl2kf"]
+[ext_resource type="Texture2D" uid="uid://2so4mwqnslsb" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0001_Camada-40.png" id="2_eipr6"]
+[ext_resource type="Texture2D" uid="uid://cmwooj2lkdftv" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0002_Camada-41.png" id="3_7vubx"]
+[ext_resource type="Texture2D" uid="uid://31ifldmv0s6o" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0003_Camada-42.png" id="4_tf0xm"]
+[ext_resource type="Texture2D" uid="uid://p0idb05jkyf4" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0004_Camada-43.png" id="5_prbmr"]
+[ext_resource type="Texture2D" uid="uid://ii8c2imnkuo6" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0005_Camada-44.png" id="6_j2dmx"]
+[ext_resource type="Texture2D" uid="uid://ule3b78r7qhl" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0006_Camada-45.png" id="7_xfli6"]
+[ext_resource type="Texture2D" uid="uid://7dqotyn2ijcb" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0007_Camada-46.png" id="8_ync1j"]
+[ext_resource type="Texture2D" uid="uid://b05mo7pxksxyp" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Madeira/Sem-Título-1_0008_Camada-47.png" id="9_11pnn"]
+
+[resource]
+script = ExtResource("1_xl2kf")
+nome_categoria = "Madeira"
+imagem_lixeira = ExtResource("1_la50l")
+imagens_lixos = Array[Texture2D]([ExtResource("2_eipr6"), ExtResource("3_7vubx"), ExtResource("4_tf0xm"), ExtResource("5_prbmr"), ExtResource("6_j2dmx"), ExtResource("7_xfli6"), ExtResource("8_ync1j"), ExtResource("9_11pnn")])

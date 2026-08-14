@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://bpvmq16knvkd3"]
+
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="1_46r7p"]
+[ext_resource type="Texture2D" uid="uid://crgauu6txh4qg" path="res://scenes/minigames/clicar na ordem/thumbnail_ordem.png" id="1_gi7mt"]
+[ext_resource type="PackedScene" uid="uid://4edhddhxwvwk" path="res://scenes/minigames/clicar_na_ordem.tscn" id="2_4k5jr"]
+[ext_resource type="Texture2D" uid="uid://cfhh6p4mghlpr" path="res://assets/ui/3cd970fe-fc2b-41bb-b45f-ae472a53da87.png" id="2_bklap"]
+
+[resource]
+script = ExtResource("1_46r7p")
+nome = "Siga o Passo a Passo"
+simbolo_3d = ExtResource("2_bklap")
+imagem_menu = ExtResource("1_gi7mt")
+minigame_scene = ExtResource("2_4k5jr")

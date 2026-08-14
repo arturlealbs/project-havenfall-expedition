@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://b7t1fk3du1hk6"]
+
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_ir61p"]
+[ext_resource type="Texture2D" uid="uid://cj6dviorpns0q" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L2.png" id="1_wrj8b"]
+[ext_resource type="Texture2D" uid="uid://cop5rvipj34k" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0001_Camada-17.png" id="2_m5vxy"]
+[ext_resource type="Texture2D" uid="uid://che0dfl7i4nd1" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0002_Camada-18.png" id="3_x8ah0"]
+[ext_resource type="Texture2D" uid="uid://cr5waou4jakcf" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0003_Camada-19.png" id="4_7es17"]
+[ext_resource type="Texture2D" uid="uid://cw1tnh8qgcg0s" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0004_Camada-20.png" id="5_csc0m"]
+[ext_resource type="Texture2D" uid="uid://jbdr7x6tabq2" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0005_Camada-21.png" id="6_w0dvq"]
+[ext_resource type="Texture2D" uid="uid://crmxokggcdhtp" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0006_Camada-22.png" id="7_l7dbd"]
+[ext_resource type="Texture2D" uid="uid://mp7xnlj11mub" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0007_Camada-23.png" id="8_6lsog"]
+[ext_resource type="Texture2D" uid="uid://dawjmeb4tvrpv" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Plástico/Sem-Título-1_0008_Camada-24.png" id="9_ec7lt"]
+
+[resource]
+script = ExtResource("1_ir61p")
+nome_categoria = "Plástico"
+imagem_lixeira = ExtResource("1_wrj8b")
+imagens_lixos = Array[Texture2D]([ExtResource("2_m5vxy"), ExtResource("3_x8ah0"), ExtResource("4_7es17"), ExtResource("5_csc0m"), ExtResource("6_w0dvq"), ExtResource("7_l7dbd"), ExtResource("8_6lsog"), ExtResource("9_ec7lt")])

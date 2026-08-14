@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://c5dr1tilv0pt2"]
+
+[ext_resource type="Texture2D" uid="uid://fpqk5tt0a2cm" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L10.png" id="1_kl2tc"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_ycw46"]
+[ext_resource type="Texture2D" uid="uid://baywjlbadpvkk" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0001_Camada-77.png" id="2_spm6y"]
+[ext_resource type="Texture2D" uid="uid://d270uui6pljv2" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0002_Camada-78.png" id="3_nuo00"]
+[ext_resource type="Texture2D" uid="uid://hmk1yauaiqlb" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0003_Camada-79.png" id="4_f8t0u"]
+[ext_resource type="Texture2D" uid="uid://bflw60tbkg3xd" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0004_Camada-80.png" id="5_vmoe2"]
+[ext_resource type="Texture2D" uid="uid://c2o474dnyo07i" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0005_Camada-81.png" id="6_1i1rh"]
+[ext_resource type="Texture2D" uid="uid://eqtljctdv7c8" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Lixo não reciclável, contaminado ou cuja separação não é possível/Sem-Título-1_0006_Camada-82.png" id="7_86coe"]
+
+[resource]
+script = ExtResource("1_ycw46")
+nome_categoria = "Não Reciclável"
+imagem_lixeira = ExtResource("1_kl2tc")
+imagens_lixos = Array[Texture2D]([ExtResource("2_spm6y"), ExtResource("3_nuo00"), ExtResource("4_f8t0u"), ExtResource("5_vmoe2"), ExtResource("6_1i1rh"), ExtResource("7_86coe")])

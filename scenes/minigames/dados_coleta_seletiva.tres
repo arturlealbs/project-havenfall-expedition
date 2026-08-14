@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://88flqn55lo8k"]
+
+[ext_resource type="Texture2D" uid="uid://cgu4oce70gg7" path="res://scenes/minigames/coleta_seletiva/thumbnail_reciclagem.png" id="1_asogo"]
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="1_b7gvq"]
+[ext_resource type="PackedScene" uid="uid://b6lqn8he65sju" path="res://scenes/minigames/coleta_seletiva/coleta_seletiva.tscn" id="2_stdwm"]
+[ext_resource type="Texture2D" uid="uid://bitcfy24ofp57" path="res://assets/ui/f987f9fd-a62d-46af-8536-cec09a6b1dcc.png" id="4_yg2j7"]
+
+[resource]
+script = ExtResource("1_b7gvq")
+nome = "Coleta Seletiva"
+simbolo_3d = ExtResource("4_yg2j7")
+imagem_menu = ExtResource("1_asogo")
+minigame_scene = ExtResource("2_stdwm")

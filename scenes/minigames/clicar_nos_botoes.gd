@@ -1,5 +1,8 @@
 extends Control
 
+signal venceu(pontos: int)
+signal perdeu
+
 @export var buraco_scene: PackedScene
 @export var imagens_fundo: Array[Texture2D]
 @export var imagens_buraco: Array[Texture2D]
@@ -10,6 +13,7 @@ extends Control
 @onready var play_area = $PlayArea
 @onready var timer = $GameTimer
 @onready var time_bar = $TimeBar
+@onready var counter_label = $CounterLabel
 
 
 var buracos_restantes: int = 0
@@ -22,7 +26,7 @@ func _ready():
 	time_bar.max_value = timer.wait_time
 	time_bar.value = timer.wait_time
 	
-	quantidade = randi_range(5, 15)
+	quantidade = randi_range(5, 11)
 	preparar_jogo()
 	# Conecta o sinal de timeout do Timer para a derrota
 	timer.timeout.connect(_ao_tempo_acabar)
@@ -79,10 +83,14 @@ func instanciar_buraco(pos: Vector2, buraco_scale: float):
 	
 func preparar_jogo():
 	buracos_restantes = quantidade
+	if counter_label:
+		counter_label.text = "Buracos: %d" % buracos_restantes
 	gerar_buracos()
 
 func _on_buraco_tapado():
 	buracos_restantes -= 1
+	if counter_label:
+		counter_label.text = "Buracos: %d" % buracos_restantes
 	print(buracos_restantes)
 	if buracos_restantes <= 0:
 		vencer_jogo()
@@ -90,7 +98,7 @@ func _on_buraco_tapado():
 func vencer_jogo():
 	timer.stop() # Para o tempo para não disparar derrota
 	print("Vitória! Rua asfaltada com sucesso.")
-	# Aqui você chamaria o sinal para fechar o minigame no mapa principal
+	venceu.emit(50)
 
 func _ao_tempo_acabar():
 	if buracos_restantes > 0:
@@ -98,4 +106,5 @@ func _ao_tempo_acabar():
 
 func perder_jogo():
 	print("Derrota! O asfalto rachou nos buracos restantes.")
+	perdeu.emit()
 	# Feedback visual de rachadura ou som de erro

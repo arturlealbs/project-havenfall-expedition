@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://01djtp0ek5qu"]
+
+[ext_resource type="Texture2D" uid="uid://in3vwkj8i0n7" path="res://scenes/minigames/clicar na ordem/Plantando árvore/1.png" id="1_a7uu1"]
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_laejy"]
+[ext_resource type="Texture2D" uid="uid://0yxvkehoiwo1" path="res://scenes/minigames/clicar na ordem/Plantando árvore/2.png" id="2_5inj4"]
+[ext_resource type="Texture2D" uid="uid://bb6e1mat5g4pv" path="res://scenes/minigames/clicar na ordem/Plantando árvore/3.png" id="3_bt2vr"]
+[ext_resource type="Texture2D" uid="uid://dfmfu44kpo2ap" path="res://scenes/minigames/clicar na ordem/Plantando árvore/4.png" id="4_vignk"]
+
+[resource]
+script = ExtResource("1_laejy")
+titulo_fase = "Plantando uma Árvore"
+imagens_passos = Array[Texture2D]([ExtResource("1_a7uu1"), ExtResource("2_5inj4"), ExtResource("3_bt2vr"), ExtResource("4_vignk")])
+descricoes_passos = Array[String](["Cavar um buraco na terra", "Colocar a mudinha com cuidado", "Cobrir as raízes com terra macia", "Regar a plantinha nova"])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MinigameLevelOrder" format=3 uid="uid://cf53b4m5ivhq2"]
+
+[ext_resource type="Texture2D" uid="uid://b3ei47jh5mfre" path="res://scenes/minigames/clicar na ordem/Telhado verde/1.png" id="1_eqe70"]
+[ext_resource type="Script" uid="uid://be2vf7d8124fw" path="res://scenes/minigames/MinigameLevelOrder.gd" id="1_ga5lg"]
+[ext_resource type="Texture2D" uid="uid://ba738dc6tx4rw" path="res://scenes/minigames/clicar na ordem/Telhado verde/2.png" id="2_3vys8"]
+[ext_resource type="Texture2D" uid="uid://bke6fi3wolh1i" path="res://scenes/minigames/clicar na ordem/Telhado verde/3.png" id="3_ijoys"]
+[ext_resource type="Texture2D" uid="uid://dxuwhydf83q5v" path="res://scenes/minigames/clicar na ordem/Telhado verde/4.png" id="4_jd5oo"]
+[ext_resource type="Texture2D" uid="uid://rdek4h6v3ale" path="res://scenes/minigames/clicar na ordem/Telhado verde/5.png" id="5_dmfpa"]
+[ext_resource type="Texture2D" uid="uid://2k68fme73iw1" path="res://scenes/minigames/clicar na ordem/Telhado verde/6.png" id="6_8o6xq"]
+[ext_resource type="Texture2D" uid="uid://csx63ocjefnl0" path="res://scenes/minigames/clicar na ordem/Telhado verde/7.png" id="7_akmlh"]
+[ext_resource type="Texture2D" uid="uid://c1wdl873f5kl4" path="res://scenes/minigames/clicar na ordem/Telhado verde/8.png" id="8_klq53"]
+
+[resource]
+script = ExtResource("1_ga5lg")
+titulo_fase = "Criando um Telhado Verde"
+imagens_passos = Array[Texture2D]([ExtResource("1_eqe70"), ExtResource("2_3vys8"), ExtResource("3_ijoys"), ExtResource("4_jd5oo"), ExtResource("5_dmfpa"), ExtResource("6_8o6xq"), ExtResource("7_akmlh"), ExtResource("8_klq53")])
+descricoes_passos = Array[String](["Aplicar a manta de borracha para impermeabilizar", "Colocar a barreira contra raízes", "Instalar a placa de drenagem", "Estender a manta geotêxtil", "Espalhar uma camada leve de substrato", "Plantar mudas de grama ou suculentas", "Fazer a primeira rega do teto", "Sentir a casa mais fresquinha"])

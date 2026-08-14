@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://b6lqn8he65sju"]
+
+[ext_resource type="Script" uid="uid://cdcvl0825h803" path="res://scenes/minigames/coleta_seletiva/coleta_seletiva.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="2_0y4d0"]
+[ext_resource type="PackedScene" uid="uid://c2something" path="res://scenes/minigames/coleta_seletiva/lixeira.tscn" id="2_scene"]
+[ext_resource type="PackedScene" uid="uid://b1something" path="res://scenes/minigames/coleta_seletiva/lixo.tscn" id="3_scene"]
+[ext_resource type="Resource" uid="uid://bqgfwuwxtk1ei" path="res://scenes/minigames/coleta_seletiva/hospitalar.tres" id="3_xhamk"]
+[ext_resource type="Resource" uid="uid://dlnepm5436yjy" path="res://scenes/minigames/coleta_seletiva/madeira.tres" id="4_kgwy8"]
+[ext_resource type="Resource" uid="uid://dqvvf8s3wbav4" path="res://scenes/minigames/coleta_seletiva/metal.tres" id="5_q023c"]
+[ext_resource type="Resource" uid="uid://c5dr1tilv0pt2" path="res://scenes/minigames/coleta_seletiva/non_reciclavel.tres" id="6_66o7j"]
+[ext_resource type="Resource" uid="uid://ddjpftyieurhx" path="res://scenes/minigames/coleta_seletiva/organico.tres" id="7_p7x7d"]
+[ext_resource type="Resource" uid="uid://8ogl1xd30jte" path="res://scenes/minigames/coleta_seletiva/papel.tres" id="8_5efib"]
+[ext_resource type="Resource" uid="uid://d2aa5dx3bb34k" path="res://scenes/minigames/coleta_seletiva/perigoso.tres" id="9_i8ifm"]
+[ext_resource type="Resource" uid="uid://b7t1fk3du1hk6" path="res://scenes/minigames/coleta_seletiva/plastico.tres" id="10_bihmv"]
+[ext_resource type="Resource" uid="uid://dgph3vv1khgpy" path="res://scenes/minigames/coleta_seletiva/radioativo.tres" id="11_bxhp3"]
+[ext_resource type="Resource" uid="uid://4n7of8admmv2" path="res://scenes/minigames/coleta_seletiva/vidro.tres" id="12_wpk7y"]
+[ext_resource type="Texture2D" uid="uid://c16nk514g17mt" path="res://assets/ui/57badc12-6a3e-4009-9c34-ef7ba0a550cd.png" id="15_q023c"]
+[ext_resource type="Texture2D" uid="uid://bnqkdvcnjpdux" path="res://assets/ui/86df65f1-de44-4fe1-b72e-6cea8cca6bc7.png" id="16_66o7j"]
+[ext_resource type="Texture2D" uid="uid://b1muha35njaaw" path="res://assets/ui/6d558a4d-d1dd-475d-bf6f-985d5f9e169e.png" id="17_p7x7d"]
+
+[node name="ColetaSeletiva" type="Control" unique_id=564155699]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+categorias_de_lixo = Array[ExtResource("2_0y4d0")]([ExtResource("3_xhamk"), ExtResource("4_kgwy8"), ExtResource("5_q023c"), ExtResource("6_66o7j"), ExtResource("7_p7x7d"), ExtResource("8_5efib"), ExtResource("9_i8ifm"), ExtResource("10_bihmv"), ExtResource("11_bxhp3"), ExtResource("12_wpk7y")])
+lixeira_scene = ExtResource("2_scene")
+lixo_scene = ExtResource("3_scene")
+
+[node name="PainelAjuda2" type="TextureRect" parent="." unique_id=52227708]
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -784.0
+offset_top = -641.0
+offset_right = 779.0
+offset_bottom = 561.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_66o7j")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=759778650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="VBoxContainer" unique_id=1862642689]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="TimeBar" type="ProgressBar" parent="VBoxContainer/TopBar" unique_id=1096433189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 60.0
+value = 60.0
+show_percentage = false
+
+[node name="AreaLixos" type="Control" parent="VBoxContainer" unique_id=478129136]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ContainerLixeiras" type="HBoxContainer" parent="VBoxContainer" unique_id=596096184]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1041764657]
+wait_time = 60.0
+autostart = true
+
+[node name="BotaoAjuda" type="TextureButton" parent="." unique_id=2144327316]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 140.0
+grow_horizontal = 0
+texture_normal = ExtResource("15_q023c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PainelAjuda" type="TextureRect" parent="." unique_id=789293069]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_66o7j")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="PainelAjuda" unique_id=529380854]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.5
+offset_top = 8.0
+offset_right = 128.5
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("17_p7x7d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelAjuda" unique_id=1392672258]
+custom_minimum_size = Vector2(360, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -129.0
+offset_right = 225.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PainelAjuda/ScrollContainer" unique_id=1031186974]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15

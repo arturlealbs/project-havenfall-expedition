@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://4n7of8admmv2"]
+
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_ic407"]
+[ext_resource type="Texture2D" uid="uid://31gktn8608yu" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L3.png" id="1_prfdy"]
+[ext_resource type="Texture2D" uid="uid://c4o24micgb07w" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0001_Camada-26.png" id="2_yw0we"]
+[ext_resource type="Texture2D" uid="uid://dpa7a6prcmovi" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0002_Camada-27.png" id="3_cr7bo"]
+[ext_resource type="Texture2D" uid="uid://3crq24e3lxmb" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0003_Camada-28.png" id="4_oh1c3"]
+[ext_resource type="Texture2D" uid="uid://dvlrxe1akmmod" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0004_Camada-29.png" id="5_4ccrk"]
+[ext_resource type="Texture2D" uid="uid://dp6wqu0pch48" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0005_Camada-30.png" id="6_vya05"]
+[ext_resource type="Texture2D" uid="uid://c0i8u8onbmv36" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0006_Camada-31.png" id="7_qscgd"]
+[ext_resource type="Texture2D" uid="uid://mefk5pvfuwn7" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Vidro/Sem-Título-1_0007_Camada-32.png" id="8_5qphc"]
+
+[resource]
+script = ExtResource("1_ic407")
+nome_categoria = "Vidro"
+imagem_lixeira = ExtResource("1_prfdy")
+imagens_lixos = Array[Texture2D]([ExtResource("2_yw0we"), ExtResource("3_cr7bo"), ExtResource("4_oh1c3"), ExtResource("5_4ccrk"), ExtResource("6_vya05"), ExtResource("7_qscgd"), ExtResource("8_5qphc")])

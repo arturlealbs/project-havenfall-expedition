@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TipoLixoData" format=3 uid="uid://dqvvf8s3wbav4"]
+
+[ext_resource type="Script" uid="uid://b1gurbyf5fbfo" path="res://scenes/minigames/coleta_seletiva/TipoLixoData.gd" id="1_8jpne"]
+[ext_resource type="Texture2D" uid="uid://0vfgbgpnctai" path="res://scenes/minigames/coleta_seletiva/Lixeiras/L4.png" id="1_k2wim"]
+[ext_resource type="Texture2D" uid="uid://dwqyqxiu5ww01" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0001_Camada-34.png" id="2_87n37"]
+[ext_resource type="Texture2D" uid="uid://d4h7hv2k4qbtn" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0002_Camada-35.png" id="3_3xxku"]
+[ext_resource type="Texture2D" uid="uid://bji2eweaaqjw2" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0003_Camada-36.png" id="4_5bwwv"]
+[ext_resource type="Texture2D" uid="uid://25wfpsx3j2q4" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0004_Camada-37.png" id="5_5sg47"]
+[ext_resource type="Texture2D" uid="uid://bpbngqs6mqcqc" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0005_Camada-38.png" id="6_6mn5w"]
+[ext_resource type="Texture2D" uid="uid://c7xsjdhdtn6ji" path="res://scenes/minigames/coleta_seletiva/Lixos coleta/Metal/Sem-Título-1_0006_Camada-33.png" id="7_tfjf1"]
+
+[resource]
+script = ExtResource("1_8jpne")
+nome_categoria = "Metal"
+imagem_lixeira = ExtResource("1_k2wim")
+imagens_lixos = Array[Texture2D]([ExtResource("2_87n37"), ExtResource("3_3xxku"), ExtResource("4_5bwwv"), ExtResource("5_5sg47"), ExtResource("6_6mn5w"), ExtResource("7_tfjf1")])
