@@ -13,43 +13,43 @@ uv1_triplanar_sharpness = 10.0
 [node name="PlataformaC" type="Node3D" unique_id=1338971661]
 
 [node name="Quadrado1" type="CSGBox3D" parent="." unique_id=1022738510]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, -6)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 5)
+size = Vector3(5, 8, 5)
 
 [node name="Quadrado2" type="CSGBox3D" parent="." unique_id=2021216392]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, 0)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 4)
+size = Vector3(5, 8, 4)
 
 [node name="Quadrado6" type="CSGBox3D" parent="." unique_id=19140088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -18.047531)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, -18.047531)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 5)
+size = Vector3(5, 8, 5)
 
 [node name="Quadrado7" type="CSGBox3D" parent="." unique_id=1645679078]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12.047531)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, -12.047531)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 4)
+size = Vector3(5, 8, 4)
 
 [node name="Quadrado3" type="CSGBox3D" parent="." unique_id=445191955]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, 6)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 5)
+size = Vector3(5, 8, 5)
 
 [node name="Quadrado4" type="CSGBox3D" parent="." unique_id=1354065481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, 12)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 4)
+size = Vector3(5, 8, 4)
 
 [node name="Quadrado5" type="CSGBox3D" parent="." unique_id=627912427]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, 18)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(5, 1, 5)
+size = Vector3(5, 8, 5)
