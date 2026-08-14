@@ -1,15 +1,7 @@
 [gd_scene format=3 uid="uid://bujgldvqltgng"]
 
+[ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://scenes/test_level/platforms.tres" id="1_sknu4"]
 [ext_resource type="Script" uid="uid://dyr1qwlh6su58" path="res://scenes/test_level/platforms/platform_sliding_middle.gd" id="1_slidescript"]
-[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://scenes/test_level/checkboard.png" id="2_checktex"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mat"]
-albedo_color = Color(0.3, 0.75, 0.4, 1)
-albedo_texture = ExtResource("2_checktex")
-roughness = 0.85
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-uv1_triplanar_sharpness = 10.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_center"]
 size = Vector3(5, 1, 6)
@@ -18,7 +10,7 @@ size = Vector3(5, 1, 6)
 
 [node name="ExtremidadeEsquerda" type="CSGBox3D" parent="." unique_id=1016818038]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.689331, 0)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_sknu4")
 use_collision = true
 size = Vector3(6, 8.378662, 6)
 
@@ -32,11 +24,11 @@ shape = SubResource("BoxShape3D_center")
 
 [node name="MeshVisual" type="CSGBox3D" parent="CentroSlider" unique_id=417315127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.1276855, 0)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_sknu4")
 size = Vector3(5, 9.255371, 6)
 
 [node name="ExtremidadeDireita" type="CSGBox3D" parent="." unique_id=706914972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3.935791, 0)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_sknu4")
 use_collision = true
 size = Vector3(6, 8.871582, 6)

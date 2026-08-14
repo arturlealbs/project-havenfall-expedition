@@ -6,7 +6,7 @@ extends CanvasLayer
 
 @onready var barra_respiracao = $MarginContainer/VBoxContainer/RespiracaoContainer/TextureRect/BarraRespiracao
 @onready var barra_hidratacao = $MarginContainer/VBoxContainer/HidratacaoContainer/TextureRect/BarraHidratacao
-@onready var label_pontos = $MarginContainer2/LabelPontos
+@onready var label_pontos = $MarginContainer2/HBoxContainer/LabelPontos
 
 var respiracao: float
 var hidratacao: float

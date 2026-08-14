@@ -8,7 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://bujgldvqltgng" path="res://scenes/test_level/platforms/PlataformaB.tscn" id="7_qex0d"]
 [ext_resource type="PackedScene" uid="uid://dfrhxfvra0v5o" path="res://scenes/test_level/platforms/PlataformaC.tscn" id="8_vwfh7"]
 [ext_resource type="PackedScene" uid="uid://dqrk50op1ivdd" path="res://scenes/test_level/platforms/PlataformaD.tscn" id="10_8ag5x"]
+[ext_resource type="PackedScene" uid="uid://bmddjwv766jjy" path="res://scenes/MinigameManager.tscn" id="12_aesai"]
+[ext_resource type="Script" uid="uid://ofh7yffwv0c3" path="res://scenes/minigames/MinigameData.gd" id="13_kqq38"]
+[ext_resource type="Resource" uid="uid://c3opct46o7523" path="res://scenes/minigames/dados_apagar_incendio.tres" id="14_2yygd"]
+[ext_resource type="Resource" uid="uid://bpvmq16knvkd3" path="res://scenes/minigames/dados_clicar_na_ordem.tres" id="15_t80er"]
+[ext_resource type="Resource" uid="uid://88flqn55lo8k" path="res://scenes/minigames/dados_coleta_seletiva.tres" id="16_qsvm0"]
+[ext_resource type="Resource" uid="uid://dqoedn6jptdyl" path="res://scenes/minigames/dados_tapar_buraco.tres" id="17_fb7sk"]
+[ext_resource type="PackedScene" uid="uid://dnn5w7tgo532w" path="res://scenes/minigame_orb.tscn" id="18_0lb66"]
 [ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://scenes/test_level/interactable/flag/flag_reached_screen.tscn" id="19_cpgj4"]
+[ext_resource type="PackedScene" uid="uid://b5d0026i3apl1" path="res://scenes/HUD.tscn" id="19_xg56q"]
 [ext_resource type="Script" uid="uid://bp7o7w7wjk1r3" path="res://scenes/test_level/interactable/kill_plane/kill_plane_3d.gd" id="20_kfloor"]
 [ext_resource type="Texture2D" uid="uid://c0qpe1eglhtwe" path="res://assets/textura_lama.png" id="21_lama"]
 
@@ -286,3 +294,41 @@ transform = Transform3D(-0.24434274, -2.5688394e-11, -0.9696891, 2.1276624e-10, 
 visible = false
 use_collision = true
 size = Vector3(6.9798584, 15.745178, 2.059082)
+
+[node name="MinigameManager" parent="." unique_id=1447968560 instance=ExtResource("12_aesai")]
+minigames_disponiveis = Array[ExtResource("13_kqq38")]([ExtResource("14_2yygd"), ExtResource("15_t80er"), ExtResource("16_qsvm0"), ExtResource("17_fb7sk")])
+minigame_orb_scene = ExtResource("18_0lb66")
+
+[node name="HUD" parent="." unique_id=1551091211 instance=ExtResource("19_xg56q")]
+
+[node name="SpawnPointsMinigames" type="Node3D" parent="." unique_id=718426064 groups=["spawn_minigames"]]
+
+[node name="Marker3D3" type="Marker3D" parent="SpawnPointsMinigames" unique_id=238970554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.87343, 2, -6.213436)
+
+[node name="Marker3D4" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1058212923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.293884, 2, -6.213436)
+
+[node name="Marker3D5" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1787622491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.878716, 2, 70.34463)
+
+[node name="Marker3D6" type="Marker3D" parent="SpawnPointsMinigames" unique_id=305193290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.240013, 2, 41.302494)
+
+[node name="Marker3D7" type="Marker3D" parent="SpawnPointsMinigames" unique_id=148601749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.685944, 2, -5.5262184)
+
+[node name="Marker3D8" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1613192172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.43781, 2, -10.100615)
+
+[node name="Marker3D9" type="Marker3D" parent="SpawnPointsMinigames" unique_id=4386092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -132.03967, 2, -80.123505)
+
+[node name="Marker3D10" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1157257590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.473724, 2, -91.00097)
+
+[node name="Marker3D11" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1595157671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.38406, 2, -100.50019)
+
+[node name="Marker3D12" type="Marker3D" parent="SpawnPointsMinigames" unique_id=1217676661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.34092, 2, -104.22467)

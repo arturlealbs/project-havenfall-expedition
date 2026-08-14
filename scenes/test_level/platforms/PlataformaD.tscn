@@ -1,15 +1,7 @@
 [gd_scene format=3 uid="uid://dqrk50op1ivdd"]
 
+[ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://scenes/test_level/platforms.tres" id="1_si6t1"]
 [ext_resource type="Script" uid="uid://c7k8qjcws06xa" path="res://scenes/test_level/platforms/platform_spinning_obstacle.gd" id="1_spinscript"]
-[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://scenes/test_level/checkboard.png" id="2_checktex"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
-albedo_color = Color(0.25, 0.45, 0.85, 1)
-albedo_texture = ExtResource("2_checktex")
-roughness = 0.85
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-uv1_triplanar_sharpness = 10.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_armH"]
 size = Vector3(8.5, 0.5, 1)
@@ -25,7 +17,7 @@ roughness = 0.5
 
 [node name="Piso" type="CSGBox3D" parent="." unique_id=1043969387]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5, 0)
-material_override = SubResource("StandardMaterial3D_floor")
+material_override = ExtResource("1_si6t1")
 use_collision = true
 size = Vector3(9, 8, 28)
 

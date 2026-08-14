@@ -1,55 +1,47 @@
 [gd_scene format=3 uid="uid://dfrhxfvra0v5o"]
 
-[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://scenes/test_level/checkboard.png" id="1_checktex"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mat"]
-albedo_color = Color(0.85, 0.55, 0.1, 1)
-albedo_texture = ExtResource("1_checktex")
-roughness = 0.85
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-uv1_triplanar_sharpness = 10.0
+[ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://scenes/test_level/platforms.tres" id="1_12eye"]
 
 [node name="PlataformaC" type="Node3D" unique_id=1338971661]
 
 [node name="Quadrado1" type="CSGBox3D" parent="." unique_id=1022738510]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, -6)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 5)
 
 [node name="Quadrado2" type="CSGBox3D" parent="." unique_id=2021216392]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, 0)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 4)
 
 [node name="Quadrado6" type="CSGBox3D" parent="." unique_id=19140088]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, -18.047531)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 5)
 
 [node name="Quadrado7" type="CSGBox3D" parent="." unique_id=1645679078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, -12.047531)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 4)
 
 [node name="Quadrado3" type="CSGBox3D" parent="." unique_id=445191955]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, 6)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 5)
 
 [node name="Quadrado4" type="CSGBox3D" parent="." unique_id=1354065481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.5, 12)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 4)
 
 [node name="Quadrado5" type="CSGBox3D" parent="." unique_id=627912427]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, 18)
-material_override = SubResource("StandardMaterial3D_mat")
+material_override = ExtResource("1_12eye")
 use_collision = true
 size = Vector3(5, 8, 5)
