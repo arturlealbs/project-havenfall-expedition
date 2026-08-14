@@ -17,10 +17,10 @@ size = Vector3(5, 1, 6)
 [node name="PlataformaB" type="Node3D" unique_id=961704774]
 
 [node name="ExtremidadeEsquerda" type="CSGBox3D" parent="." unique_id=1016818038]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.689331, 0)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(6, 1, 6)
+size = Vector3(6, 8.378662, 6)
 
 [node name="CentroSlider" type="AnimatableBody3D" parent="." unique_id=2004917820]
 script = ExtResource("1_slidescript")
@@ -31,11 +31,12 @@ move_speed = 0.1
 shape = SubResource("BoxShape3D_center")
 
 [node name="MeshVisual" type="CSGBox3D" parent="CentroSlider" unique_id=417315127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.1276855, 0)
 material_override = SubResource("StandardMaterial3D_mat")
-size = Vector3(5, 1, 6)
+size = Vector3(5, 9.255371, 6)
 
 [node name="ExtremidadeDireita" type="CSGBox3D" parent="." unique_id=706914972]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3.935791, 0)
 material_override = SubResource("StandardMaterial3D_mat")
 use_collision = true
-size = Vector3(6, 1, 6)
+size = Vector3(6, 8.871582, 6)

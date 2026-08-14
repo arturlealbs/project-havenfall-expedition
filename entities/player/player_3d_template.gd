@@ -31,6 +31,8 @@ var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
 var _last_yaw := 0.0
 var _smoothed_turn := 0.0
+var _last_floor_position := Vector3.ZERO
+var _is_dead := false
 
 ## The last movement or aim direction input by the player. We use this to orient
 ## the character model.
@@ -50,11 +52,25 @@ var _smoothed_turn := 0.0
 
 
 func _ready() -> void:
+	_last_floor_position = _start_position
 	Events.kill_plane_touched.connect(func on_kill_plane_touched() -> void:
-		global_position = _start_position
+		if _is_dead:
+			return
+		_is_dead = true
+		# Salva a transform global da câmera e desanexa do player
+		var saved_pivot_transform := _camera_pivot.global_transform
+		var scene_root := get_tree().current_scene
+		_camera_pivot.reparent(scene_root, true)
+		_camera_pivot.global_transform = saved_pivot_transform
+		# Player continua caindo livremente
+		await get_tree().create_timer(1.0).timeout
+		# Reanexa a câmera ao player e restaura posição local
+		_camera_pivot.reparent(self, false)
+		_camera_pivot.position = Vector3(0.0, 1.09401, 0.0)
+		global_position = _last_floor_position
 		velocity = Vector3.ZERO
 		_skin.idle()
-		set_physics_process(true)
+		_is_dead = false
 	)
 	Events.flag_reached.connect(func on_flag_reached() -> void:
 		set_physics_process(false)
@@ -71,6 +87,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if _is_dead:
+		return
 	var player_is_using_mouse := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
@@ -161,5 +179,27 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and not _was_on_floor_last_frame:
 		_landing_sound.play()
 
+	if is_on_floor():
+		if _is_on_plataforma_a():
+			_last_floor_position = global_position
+
 	_was_on_floor_last_frame = is_on_floor()
 	move_and_slide()
+
+
+func _is_on_plataforma_a() -> bool:
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		# Só interessa colisões vindo de baixo (normal apontando pra cima)
+		if collision.get_normal().y < 0.5:
+			continue
+		var collider := collision.get_collider()
+		if collider == null:
+			continue
+		# Sobe a hierarquia procurando o nó raiz da cena PlataformaA
+		var node: Node = collider
+		while node != null:
+			if node.scene_file_path.ends_with("PlataformaA.tscn"):
+				return true
+			node = node.get_parent()
+	return false

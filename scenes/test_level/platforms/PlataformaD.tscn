@@ -24,9 +24,10 @@ roughness = 0.5
 [node name="PlataformaD" type="Node3D" unique_id=700961054]
 
 [node name="Piso" type="CSGBox3D" parent="." unique_id=1043969387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5, 0)
 material_override = SubResource("StandardMaterial3D_floor")
 use_collision = true
-size = Vector3(9, 1, 28)
+size = Vector3(9, 8, 28)
 
 [node name="ObstaculoA" type="AnimatableBody3D" parent="." unique_id=923681544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -8)
