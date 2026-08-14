@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bofx5wyp8403k" path="res://entities/player/player_3d_template.tscn" id="1_w0p8v"]
 [ext_resource type="PackedScene" uid="uid://ddhq0wcacgc0m" path="res://olinda_6.tscn" id="5_1e1q2"]
 [ext_resource type="Texture2D" uid="uid://dktrsl2tqq1jr" path="res://assets/Ajuste de deslocamento HSL.png" id="6_1e1q2"]
-[ext_resource type="PackedScene" uid="uid://cnedxfn2pxh2t" path="res://scenes/test_level/level.tscn" id="7_2frud"]
 [ext_resource type="PackedScene" uid="uid://bmxwa0mmnvioh" path="res://scenes/test_level/platforms/PlataformaA.tscn" id="7_8gojx"]
 [ext_resource type="PackedScene" uid="uid://bujgldvqltgng" path="res://scenes/test_level/platforms/PlataformaB.tscn" id="7_qex0d"]
 [ext_resource type="PackedScene" uid="uid://dfrhxfvra0v5o" path="res://scenes/test_level/platforms/PlataformaC.tscn" id="8_vwfh7"]
 [ext_resource type="PackedScene" uid="uid://dqrk50op1ivdd" path="res://scenes/test_level/platforms/PlataformaD.tscn" id="10_8ag5x"]
 [ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://scenes/test_level/interactable/flag/flag_reached_screen.tscn" id="19_cpgj4"]
+[ext_resource type="Script" uid="uid://bp7o7w7wjk1r3" path="res://scenes/test_level/interactable/kill_plane/kill_plane_3d.gd" id="20_kfloor"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7jwsp"]
 panorama = ExtResource("6_1e1q2")
@@ -47,6 +47,9 @@ volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_killfloor"]
+size = Vector3(10000, 1, 10000)
+
 [node name="Game" type="Node" unique_id=1626338255]
 script = ExtResource("1_1il7v")
 
@@ -57,10 +60,6 @@ wall_offset = 0.0
 tilt_lower_limit = -0.5
 
 [node name="FlagReachedScreen" parent="." unique_id=735488172 instance=ExtResource("19_cpgj4")]
-
-[node name="Level" parent="." unique_id=823547301 instance=ExtResource("7_2frud")]
-transform = Transform3D(0.8707937, 0, 0.49164864, 0, 1, 0, -0.49164864, 0, 0.8707937, 179.8309, -0.5206833, -26.609034)
-visible = false
 
 [node name="Olinda7" parent="." unique_id=1819045747 instance=ExtResource("5_1e1q2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.43696713, 0)
@@ -150,3 +149,12 @@ transform = Transform3D(0.021884676, 0, -0.9997605, 0, 1, 0, 0.9997605, 0, 0.021
 
 [node name="PlataformaA15" parent="Plataformas" unique_id=1392889339 instance=ExtResource("7_8gojx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.41535, -0.9, -7.8278074)
+
+[node name="KillFloor" type="Area3D" parent="." unique_id=999001001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+collision_layer = 2
+monitorable = false
+script = ExtResource("20_kfloor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillFloor" unique_id=999001002]
+shape = SubResource("BoxShape3D_killfloor")
